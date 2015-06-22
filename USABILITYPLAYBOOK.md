@@ -1,5 +1,5 @@
-# Digital Services Playbook Checklist
-## 1. Play 1: Understand what people need
+#Digital Services Playbook Checklist
+1. Play 1: Understand what people need
     * Checklist:
         - [ ] Early in the project, spend time with current and prospective users of the service
         - [ ] Use a range of qualitative and quantitative research methods to determine people’s goals, needs, and behaviors; be thoughtful about the time spent
@@ -25,7 +25,7 @@
             * 
         * How often are you testing with real people?
             * 
-## 2. Play 2: Address the whole experience, from start to finish
+2. Play 2: Address the whole experience, from start to finish
     * Checklist:
         - [ ] Understand the different points at which people will interact with the service – both online and in person
         - [ ] Identify pain points in the current way users interact with the service, and prioritize these according to user needs
@@ -40,7 +40,7 @@
             * 
         * What metrics will best indicate how well the service is working for its users?
             * 
-## 3. Play 3: Make it simple and intuitive
+3. Play 3: Make it simple and intuitive
     * Checklist:
         - [ ] Create or use an existing, simple, and flexible design style guide for the service
         - [ ] Use the design style guide consistently for related digital services
@@ -60,7 +60,7 @@
             * 
         * How does the service’s design visually relate to other government services?
             * 
-## 4. Play 4: Build the service using agile and iterative practices
+4. Play 4: Build the service using agile and iterative practices
     * Checklist:
         - [ ] Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible, no longer than three months from the beginning of the project, using a “beta” or “test” period if needed
         - [ ] Run usability tests frequently to see how well the service works and identify improvements that should be made
@@ -90,7 +90,7 @@
             * 
         * At each stage of usability testing, which gaps were identified in addressing user needs?
             * 
-## 5. Play 5: Structure budgets and contracts to support delivery
+5. Play 5: Structure budgets and contracts to support delivery
     * Checklist:
         - [ ] Budget includes research, discovery, and prototyping activities
         - [ ] Contract is structured to request frequent deliverables, not multi-month milestones
@@ -108,7 +108,7 @@
             * 
         * What are the performance metrics defined in the contract (e.g., response time, system uptime, time period to address priority issues)?
             * 
-## 6. Play 6: Assign one leader and hold that person accountable
+6. Play 6: Assign one leader and hold that person accountable
     * Checklist:
         - [ ] A product owner has been identified
         - [ ] All stakeholders agree that the product owner has the authority to assign tasks and make decisions about features and technical implementation details
