@@ -1,6 +1,10 @@
 (function () {
     'use strict';
-
+    
+    //FDA API Key and base URL
+    //Completely Public Key so need to hide it
+    var baseUrl = 'https://api.fda.gov/drug/event.json?api_key=gqQrDgeZ9KGNoZnEvminmWmXFwRnFXYDyFoiUZ5S';
+    
     angular
         .module('app.core')
         .factory('dataservice', dataservice);
@@ -23,7 +27,7 @@
         */
         
         function getDrugs() {
-            return $http.get('https://api.fda.gov/drug/event.json?&count=patient.drug.medicinalproduct.exact&limit=1000')
+            return $http.get( baseUrl + '&count=patient.drug.medicinalproduct.exact&limit=1000')
                 .then(success)
                 .catch(fail);
                 

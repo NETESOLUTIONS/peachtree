@@ -2,6 +2,7 @@
 var mockData = (function() {
     return {
         getMockPeople: getMockPeople,
+        getMockDrugs: getMockDrugs,
         getMockStates: getMockStates
     };
 
@@ -21,16 +22,41 @@ var mockData = (function() {
             }
         ];
     }
-
+    
+    /* Get Mock datasets for testing */
+    
     function getMockPeople() {
-        return [
-            {firstName: 'John', lastName: 'Papa', age: 25, location: 'Florida'},
-            {firstName: 'Ward', lastName: 'Bell', age: 31, location: 'California'},
-            {firstName: 'Colleen', lastName: 'Jones', age: 21, location: 'New York'},
-            {firstName: 'Madelyn', lastName: 'Green', age: 18, location: 'North Dakota'},
-            {firstName: 'Ella', lastName: 'Jobs', age: 18, location: 'South Dakota'},
-            {firstName: 'Landon', lastName: 'Gates', age: 11, location: 'South Carolina'},
-            {firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming'}
-        ];
+    return [
+        {id: 1, firstName: 'Mike', lastName: 'Klein', age: 32, location: 'Maryland'},
+        {id: 2, firstName: 'Rahul', lastName: 'Suthar', age: 40, location: 'India'},
+        {id: 3, firstName: 'Dimitry', lastName: 'Korobskiy', age: 40, location: 'Virginia'},
+        {id: 4, firstName: 'Sandeep', lastName: 'Somaiya', age: 40, location: 'India'},
+        {id: 5, firstName: 'Savita', lastName: 'Sethi', age: 20, location: 'Virginia'},
+        {id: 6, firstName: 'Radha', lastName: 'Allam', age: 40, location: 'India'}
+    ];
     }
+    
+    
+    function getMockDrugs() {
+        return [
+            {
+              "meta": {
+                "disclaimer": "openFDA is a beta research project and not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.",
+                "license": "http://open.fda.gov/license",
+                "last_updated": "2015-01-21"
+              },
+              "results": [
+                {"term": "ENBREL","count": 216013},
+                {"term": "HUMIRA","count": 167800},
+                {"term": "ASPIRIN","count": 166051},
+                {"term": "TYSABRI","count": 110372},
+                {"term": "METHOTREXATE","count": 104124},
+                {"term": "AVONEX", "count": 92239},
+                {"term": "LIPITOR","count": 90301},
+                {"term": "LISINOPRIL","count": 81080},
+                {"term": "PREDNISONE","count": 78508},
+                {"term": "NEXIUM","count": 76533}
+              ]
+            }
+        ]
 })();
