@@ -34,9 +34,9 @@ describe('DrugsController', function() {
                 expect(controller.drugs).to.have.length.above(0);
             });
 
-             it('should have drugs count of 10', function () {
-                 expect(controller.drugs).to.have.length(10);
-             });
+            it('should have drugs count of 10', function () {
+                expect(controller.drugs).to.have.length(10);
+            });
         });
     });
 });
