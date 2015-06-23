@@ -24,7 +24,6 @@
         function getDrugs() {
             return dataservice.getDrugs().then(function (data) {
                 vm.drugs = data;
-                console.log(vm.drugs);
                 return vm.drugs;
             });
         }
