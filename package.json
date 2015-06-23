@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "init": "npm install",
-    "postinstall": "bower install",
+    "postinstall": "bower install --force-latest",
     "start": "node src/server/app.js",
     "test": "gulp test"
   },
