@@ -15,6 +15,8 @@
         //  <div ht-sidebar class="sidebar">
         var directive = {
             bindToController: true,
+            controller: 'SidebarController',
+            controllerAs: 'vm',
             link: link,
             restrict: 'EA',
             scope: {
