@@ -6,7 +6,7 @@
   "icense": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NETESOLUTIONS/peachtree.git"  
+    "url": "https://github.com/NETESOLUTIONS/peachtree.git"
   },
   "scripts": {
     "init": "npm install",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "body-parser": "^1.8.2",
+    "bower": "^1.4.1",
     "express": "^4.9.3",
     "morgan": "^1.1.1",
     "serve-favicon": "^2.0.1"
@@ -86,6 +87,6 @@
     "yargs": "^1.3.3"
   },
   "engines": {
-      "node": "0.12.2"
+    "node": "0.12.2"
   }
 }
