@@ -12,7 +12,7 @@
     "init": "npm install",
     "start": "node src/server/app.js",
     "test": "gulp test",
-    "postinstall": "bower install && gulp build"
+    "postinstall": "bower install && gulp serve-build"
   },
   "dependencies": {
     "body-parser": "^1.8.2",
