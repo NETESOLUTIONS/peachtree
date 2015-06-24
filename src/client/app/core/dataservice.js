@@ -16,6 +16,7 @@
         var service = {
             getPeople: getPeople,
             getDrugs: getDrugs,
+            getTop10Drugs: getTop10Drugs,
             getMessageCount: getMessageCount
         };
 
@@ -23,10 +24,28 @@
 
         function getMessageCount() { return $q.when(42); }
         /*
-         * Function for getting list of top AE reported drugs
+         * Function for getting list of top AE reported drugs max api limit
         */
         function getDrugs() {
             return $http.get(drugUrl + '&count=patient.drug.medicinalproduct.exact&limit=1000')
+                .then(success)
+                .catch(fail);
+            //define success function
+            function success(response) {
+                return response.data;
+            }
+            //define fail function
+            function fail(error) {
+                var msg = 'query for top drugs failed. ' + error.data.description;
+                logger.error(msg);
+                return $q.reject(msg);
+            }
+        }
+        /*
+         * Function for getting list of top AE reported drugs limit to top 10
+        */
+        function getTop10Drugs() {
+            return $http.get(drugUrl + '&count=patient.drug.medicinalproduct.exact&limit=10')
                 .then(success)
                 .catch(fail);
             //define success function
