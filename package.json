@@ -10,7 +10,7 @@
   },
   "scripts": {
     "init": "npm install",
-    "postinstall": "bower install --force-latest",
+    "postinstall": "bower cache clean && bower install",
     "start": "node src/server/app.js",
     "test": "gulp test"
   },
