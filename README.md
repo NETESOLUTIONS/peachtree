@@ -40,7 +40,7 @@ This will install all the project dependencies and run bower install postinstall
 
 ## Running the application locally.
 
-This app started with John Papa's Angular [Hottowel](https://github.com/johnpapa/HotTowel-Angular) yeoman generator. So, if you interested in diving really deep into the structure rules or the gulp setup please refer to his repo as it is an excellent resource.
+This app started with John Papa's Angular [Hottowel](https://github.com/johnpapa/HotTowel-Angular) yeoman generator. So, if you are interested in diving really deep into the structure, rules or the gulp setup please refer to his repo as it is an excellent resource.
 
 That beign said the gulp commands are directly taken from there with some minor modifications for deployment configurations. To get a list of the gulp tasks just run the default task or 
 ```
