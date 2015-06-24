@@ -5,12 +5,15 @@
         .module('app.drugs')
         .controller('DrugsController', DrugsController);
 
-    DrugsController.$inject = ['$q', 'dataservice', 'logger'];
+    DrugsController.$inject = ['$q', 'dataservice', 'logger', '$scope'];
     /* @ngInject */
-    function DrugsController($q, dataservice, logger) {
+    function DrugsController($q, dataservice, logger, $scope) {
         var vm = this;
         vm.drugs = [];
         vm.title = 'Drugs';
+        $scope.sortType     = 'term'; // set the default sort type
+        $scope.sortReverse  = false;  // set the default sort order
+        $scope.searchFilter   = '';     // set the default search/filter term
 
         activate();
 
