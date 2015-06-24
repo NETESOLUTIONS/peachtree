@@ -1,6 +1,5 @@
 (function () {
     'use strict';
-    //Test for deploy
     angular.module('app', [
         'app.core',
         'app.widgets',
