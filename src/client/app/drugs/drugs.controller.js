@@ -11,6 +11,9 @@
         var vm = this;
         vm.drugs = [];
         vm.title = 'Drugs';
+        vm.sortType     = 'term'; // set the default sort type
+        vm.sortReverse  = false;  // set the default sort order
+        vm.searchFilter   = '';     // set the default search/filter term
 
         activate();
 

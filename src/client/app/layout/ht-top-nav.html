@@ -1,16 +1,33 @@
-<md-toolbar>
-    <!-- put button here for mobile nav -->
-    <div class="md-toolbar-tools" layout="row" flex>
-        <a href="/">
-            <!--<img class="md-avatar" src="images/peach.png" />-->
-            <span>{{vm.navline.title}}</span>
-        </a>
-        <span flex></span>
-        <h3>
-            {{vm.navline.text}}
-        </h3>
-        <!--<a href="http://www.nete.com" target="_blank">
-            <img src="images/nete-logo.jpg" flex/>
-        </a>-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">{{vm.navline.title}}</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a ui-sref="dashboard" href="/"><i class="fa fa-dashboard"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a ui-sref="drugs" href="/"><i class="fa fa-flask"></i> Drugs</a>
+                </li>
+                <!--
+                <li ng-class="vm.isCurrent(r)"
+                    ng-repeat="r in vm.navRoutes">
+                    <a ui-sref="{{r.name}}"
+                       ng-bind-html="r.settings.content"></a>
+                </li>
+-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>{{vm.navline.text}}</li>
+            </ul>
+        </div>
     </div>
-</md-toolbar>
+</nav>
