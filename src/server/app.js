@@ -2,6 +2,7 @@
 'use strict';
 
 var express = require('express');
+var compress = require('compression');
 var app = express();
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
@@ -11,6 +12,7 @@ var four0four = require('./utils/404')();
 
 var environment = process.env.NODE_ENV;
 
+app.use(express.compress());
 app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
