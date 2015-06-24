@@ -12,17 +12,13 @@
     "init": "npm install",
     "start": "node src/server/app.js",
     "test": "gulp test",
-    "postinstall": "bower install"
+    "postinstall": "bower install && gulp build"
   },
   "dependencies": {
     "body-parser": "^1.8.2",
-    "bower": "^1.4.1",
     "express": "^4.9.3",
-    "gulp": "^3.9.0",
     "morgan": "^1.1.1",
-    "serve-favicon": "^2.0.1"
-  },
-  "devDependencies": {
+    "serve-favicon": "^2.0.1",
     "bower": "^1.4.1",
     "browser-sync": "^1.5.8",
     "chai": "^1.9.1",
