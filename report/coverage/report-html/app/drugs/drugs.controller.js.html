@@ -12,13 +12,13 @@
     </style>
 </head>
 <body>
-<div class="header high">
+<div class="header low">
     <h1>Code coverage report for <span class="entity">app/drugs/drugs.controller.js</span></h1>
     <h2>
-        Statements: <span class="metric">100% <small>(23 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">30.43% <small>(7 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Functions: <span class="metric">100% <small>(8 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Lines: <span class="metric">100% <small>(23 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">12.5% <small>(1 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">30.43% <small>(7 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
     <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">app/drugs/</a> &#187; drugs.controller.js</div>
@@ -76,33 +76,33 @@
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
-<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -116,34 +116,34 @@
 &nbsp;
     DrugsController.$inject = ['$q', 'dataservice', 'logger'];
     /* @ngInject */
-    function DrugsController($q, dataservice, logger) {
-        var vm = this;
-        vm.drugs = [];
-        vm.title = 'Drugs';
-        vm.sortType     = 'term'; // set the default sort type
-        vm.sortReverse  = false;  // set the default sort order
-        vm.searchFilter   = '';     // set the default search/filter term
+<span class="fstat-no" title="function not covered" >    function DrugsController($q, dataservice, logger) {</span>
+<span class="cstat-no" title="statement not covered" >        var vm = this;</span>
+<span class="cstat-no" title="statement not covered" >        vm.drugs = [];</span>
+<span class="cstat-no" title="statement not covered" >        vm.title = 'Drugs';</span>
+<span class="cstat-no" title="statement not covered" >        vm.sortType     = 'term'; </span>// set the default sort type
+<span class="cstat-no" title="statement not covered" >        vm.sortReverse  = false; </span> // set the default sort order
+<span class="cstat-no" title="statement not covered" >        vm.searchFilter   = ''; </span>    // set the default search/filter term
 &nbsp;
-        activate();
+<span class="cstat-no" title="statement not covered" >        activate();</span>
 &nbsp;
-        function activate() {
-            var promises = [getDrugs(), getTop10Drugs()];
-            return $q.all(promises).then(function() {
-                logger.info('Activated Drugs View');
+<span class="fstat-no" title="function not covered" >        function activate() {</span>
+<span class="cstat-no" title="statement not covered" >            var promises = [getDrugs(), getTop10Drugs()];</span>
+<span class="cstat-no" title="statement not covered" >            return $q.all(promises).then(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                logger.info('Activated Drugs View');</span>
             });
         }
         //Get Maximum listing of drugs (by AE) from the API as possible (i.e. 1000)
-        function getDrugs() {
-            return dataservice.getDrugs().then(function (data) {
-                vm.drugs = data;
-                return vm.drugs;
+<span class="fstat-no" title="function not covered" >        function getDrugs() {</span>
+<span class="cstat-no" title="statement not covered" >            return dataservice.getDrugs().then(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                vm.drugs = data;</span>
+<span class="cstat-no" title="statement not covered" >                return vm.drugs;</span>
             });
         }
         //Get listing of top 10 drugs (by AE) from the API
-        function getTop10Drugs() {
-            return dataservice.getTop10Drugs().then(function (data) {
-                vm.drugsTop10 = data;
-                return vm.drugsTop10;
+<span class="fstat-no" title="function not covered" >        function getTop10Drugs() {</span>
+<span class="cstat-no" title="statement not covered" >            return dataservice.getTop10Drugs().then(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                vm.drugsTop10 = data;</span>
+<span class="cstat-no" title="statement not covered" >                return vm.drugsTop10;</span>
             });
         }
     }
@@ -153,7 +153,7 @@
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 24 2015 19:38:46 GMT-0400 (EDT)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jun 25 2015 00:16:12 GMT+0000 (UTC)</div>
 </div>
 <script src="../../prettify.js"></script>
 <script>

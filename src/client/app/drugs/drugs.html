@@ -10,7 +10,7 @@
                               <th ng-click="sortType = 'term'; sortReverse = !sortReverse">Drug</th>
                               <th ng-click="sortType = 'count'; sortReverse = !sortReverse">Side Effect Reports</th>
                           </tr>
-                           <tr ng-repeat="d in vm.drugs.results | orderBy:sortType:sortReverse">
+                           <tr ng-repeat="d in vm.drugsTop10.results | orderBy:sortType:sortReverse">
                                <td>{{d.term}}</td>
                                <td>{{d.count}}</td>
                            </tr>

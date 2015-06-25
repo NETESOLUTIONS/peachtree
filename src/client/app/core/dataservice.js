@@ -30,7 +30,7 @@
          * Function for getting list of top AE reported drugs max api limit
         */
         function getDrugs() {
-            return $http.get(drugUrl + '&count=patient.drug.medicinalproduct.exact&limit=1000')
+            return $http.get(drugUrl + '&count=patient.drug.openfda.brand_name.exact&limit=1000')
                 .then(success)
                 .catch(fail);
             //define success function
@@ -48,7 +48,7 @@
          * Function for getting list of top AE reported drugs limit to top 10
         */
         function getTop10Drugs() {
-            return $http.get(drugUrl + '&count=patient.drug.medicinalproduct.exact&limit=10')
+            return $http.get(drugUrl + '&count=patient.drug.openfda.brand_name.exact&limit=10')
                 .then(success)
                 .catch(fail);
             //define success function
