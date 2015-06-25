@@ -12,13 +12,13 @@
     </style>
 </head>
 <body>
-<div class="header low">
+<div class="header high">
     <h1>Code coverage report for <span class="entity">app/dashboard/dashboard.controller.js</span></h1>
     <h2>
-        Statements: <span class="metric">31.82% <small>(7 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">95.24% <small>(20 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Functions: <span class="metric">12.5% <small>(1 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Lines: <span class="metric">31.82% <small>(7 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">95.24% <small>(20 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
     <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">app/dashboard/</a> &#187; dashboard.controller.js</div>
@@ -63,12 +63,7 @@
 36
 37
 38
-39
-40
-41
-42
-43
-44</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+39</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
@@ -78,35 +73,30 @@
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -120,36 +110,31 @@
 &nbsp;
     DashboardController.$inject = ['$q', 'dataservice', 'logger'];
     /* @ngInject */
-<span class="fstat-no" title="function not covered" >    function DashboardController($q, dataservice, logger) {</span>
-<span class="cstat-no" title="statement not covered" >        var vm = this;</span>
-<span class="cstat-no" title="statement not covered" >        vm.news = {</span>
-            title: 'peachtree',
-            description: 'Hot Towel Angular is a SPA template for Angular developers.'
-        };
-<span class="cstat-no" title="statement not covered" >        vm.messageCount = 0;</span>
-<span class="cstat-no" title="statement not covered" >        vm.people = [];</span>
-<span class="cstat-no" title="statement not covered" >        vm.title = 'Dashboard';</span>
+    function DashboardController($q, dataservice, logger) {
+        var vm = this;
+        vm.drugs = [];
+        vm.title = 'Dashboard';
+        vm.sortType = 'rank'; // set the default sort type
+        vm.sortReverse = false;  // set the default sort order
+        vm.searchFilter = '';     // set the default search/filter term
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        activate();</span>
+        activate();
 &nbsp;
-<span class="fstat-no" title="function not covered" >        function activate() {</span>
-<span class="cstat-no" title="statement not covered" >            var promises = [getMessageCount(), getPeople()];</span>
-<span class="cstat-no" title="statement not covered" >            return $q.all(promises).then(<span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >                logger.info('Activated Dashboard View');</span>
+        function activate() {
+            var promises = [getTop10Drugs()];
+            return $q.all(promises).then(function() {
+                logger.info('Activated Dashboard View');
             });
         }
 &nbsp;
-<span class="fstat-no" title="function not covered" >        function getMessageCount() {</span>
-<span class="cstat-no" title="statement not covered" >            return dataservice.getMessageCount().then(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
-<span class="cstat-no" title="statement not covered" >                vm.messageCount = data;</span>
-<span class="cstat-no" title="statement not covered" >                return vm.messageCount;</span>
-            });
-        }
-&nbsp;
-<span class="fstat-no" title="function not covered" >        function getPeople() {</span>
-<span class="cstat-no" title="statement not covered" >            return dataservice.getPeople().then(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
-<span class="cstat-no" title="statement not covered" >                vm.people = data;</span>
-<span class="cstat-no" title="statement not covered" >                return vm.people;</span>
+        //Get listing of top 10 drugs (by AE) from the API
+        function getTop10Drugs() {
+            return dataservice.getTop10Drugs().then(function (data) {
+                vm.drugs = data;
+                for (var i = 0; i &lt; vm.drugs.results; i++) {
+<span class="cstat-no" title="statement not covered" >                    vm.drugs.results[i].rank = i + 1;</span>
+                }
+                return vm.drugs;
             });
         }
     }
@@ -159,7 +144,7 @@
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jun 25 2015 00:16:12 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jun 25 2015 18:26:35 GMT-0400 (EDT)</div>
 </div>
 <script src="../../prettify.js"></script>
 <script>

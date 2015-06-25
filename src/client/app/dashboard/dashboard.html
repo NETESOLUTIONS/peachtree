@@ -10,7 +10,7 @@
                    </ul>
                </div>
                <div class="row">
-                   <bar-chart height="500" data="{{ vm.drugs.chartData.series }}" hovered="hovered(args)"></bar-chart>
+                   <canvas id="line" class="chart chart-bar" data="[219582,204860,169284,167516,167170]" labels="['ENBREL','REGULAR STRENGTH PAIN RELIEF','HUMIRA','ECOTRIN','BUFFERIN']" legend="true" click="onClick"></canvas>
                </div>
             </div><!--end of graph report column -->
             <div class="col-xs-12 col-md-6">
@@ -18,18 +18,23 @@
                 <div class="table-responsive">
                     <table class="table table-striped table-hover table-condensed">
                         <thead>
-                            <th>Rank</th>
-                            <th>Drug</th>
-                            <th>No. AE</th>
+                            <tr>
+                                <th ng-click="vm.sortType = 'rank'; vm.sortReverse = !vm.sortReverse">Rank <i class="fa fa-caret-up" ng-show="vm.sortType == 'rank' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'rank' && vm.sortReverse"></i>
+                                </th>
+                                <th ng-click="vm.sortType = 'term'; vm.sortReverse = !vm.sortReverse">Drug <i class="fa fa-caret-up" ng-show="vm.sortType == 'term' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'term' && vm.sortReverse"></i>
+                                </th>
+                                <th ng-click="vm.sortType = 'count'; vm.sortReverse = !vm.sortReverse">No. AE <i class="fa fa-caret-up" ng-show="vm.sortType == 'count' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'count' && vm.sortReverse"></i>
+                                </th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="d in vm.drugs.results | orderBy:sortType:sortReverse">
-                                <td>{{ $index + 1 }}</td>
+                            <tr ng-repeat="d in vm.drugs.results | orderBy:vm.sortType:vm.sortReverse">
+                                <td>{{d.rank}}</td>
                                <td>{{d.term}}</td>
                                <td>{{d.count}}</td>
                             </tr>
                         </tbody>
-                    </table>                            
+                    </table>
                 </div>
             </div><!--end of details dashboard column -->
         </div>

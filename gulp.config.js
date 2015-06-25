@@ -14,7 +14,7 @@ module.exports = function() {
         ignorePath: '../..'
     };
     var nodeModules = 'node_modules';
-    
+
     var config = {
         /**
          * File paths
