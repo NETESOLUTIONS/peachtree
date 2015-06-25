@@ -1,7 +1,6 @@
 /* jshint -W079 */
 var mockData = (function() {
     return {
-        getMockPeople: getMockPeople,
         getMockDrugs: getMockDrugs,
         getMockStates: getMockStates
     };
@@ -23,16 +22,6 @@ var mockData = (function() {
         ];
     }
     /* Get Mock datasets for testing */
-    function getMockPeople() {
-        return [
-            {id: 1, firstName: 'Mike', lastName: 'Klein', age: 32, location: 'Maryland'},
-            {id: 2, firstName: 'Rahul', lastName: 'Suthar', age: 40, location: 'India'},
-            {id: 3, firstName: 'Dimitry', lastName: 'Korobskiy', age: 40, location: 'Virginia'},
-            {id: 4, firstName: 'Sandeep', lastName: 'Somaiya', age: 40, location: 'India'},
-            {id: 5, firstName: 'Savita', lastName: 'Sethi', age: 20, location: 'Virginia'},
-            {id: 6, firstName: 'Radha', lastName: 'Allam', age: 40, location: 'India'}
-        ];
-    }
     function getMockDrugs() {
         return [
                 {term: 'ENBREL', count: 216013},
