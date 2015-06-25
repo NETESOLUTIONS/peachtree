@@ -141,7 +141,8 @@ gulp.task('wiredep', function() {
 
 gulp.task('inject', ['wiredep', 'styles', 'templatecache'], function() {
     log('Wire up css into the html, after files are ready');
-
+    
+    console.log(config.css);
     return gulp
         .src(config.index)
         .pipe(inject(config.css))

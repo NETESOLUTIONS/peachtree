@@ -25,22 +25,16 @@ describe('DashboardController', function() {
             it('should have title of Dashboard', function () {
                 expect(controller.title).to.equal('Dashboard');
             });
-
             it('should have logged "Activated"', function() {
                 expect($log.info.logs).to.match(/Activated/);
             });
-
-            it('should have news', function () {
-                expect(controller.news).to.not.be.empty;
+            it('should have at least 1 drugs', function () {
+                expect(controller.drugs).to.have.length.above(0);
             });
-
-            it('should have at least 1 person', function () {
-                expect(controller.people).to.have.length.above(0);
-            });
-
-            it('should have people count of 5', function () {
-                expect(controller.people).to.have.length(6);
-            });
+            //Removing count mock counts from controlling testing.
+            // it('should have drugs count of 5', function () {
+            //     expect(controller.people).to.have.length(6);
+            // });
         });
     });
 });

@@ -9,29 +9,23 @@
     /* @ngInject */
     function DashboardController($q, dataservice, logger) {
         var vm = this;
-        vm.people = [];
+        vm.drugs = [];
         vm.title = 'Dashboard';
 
         activate();
-
+        
         function activate() {
-            var promises = [getMessageCount(), getPeople()];
+            var promises = [getTop10Drugs()];
             return $q.all(promises).then(function() {
                 logger.info('Activated Dashboard View');
             });
         }
 
-        function getMessageCount() {
-            return dataservice.getMessageCount().then(function (data) {
-                vm.messageCount = data;
-                return vm.messageCount;
-            });
-        }
-
-        function getPeople() {
-            return dataservice.getPeople().then(function (data) {
-                vm.people = data;
-                return vm.people;
+        //Get listing of top 10 drugs (by AE) from the API
+        function getTop10Drugs() {
+            return dataservice.getTop10Drugs().then(function (data) {
+                vm.drugs = data;
+                return vm.drugs;
             });
         }
     }

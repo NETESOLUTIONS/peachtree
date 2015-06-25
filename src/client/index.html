@@ -15,7 +15,9 @@
     <!-- build:css styles/lib.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+    <link rel="stylesheet" href="/bower_components/angular-chart.js/dist/angular-chart.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -26,7 +28,7 @@
     <!-- endbuild -->
 </head>
 <body>
-        <div ng-include="'app/layout/shell.html'"></div>
+        <div class="shell" ng-include="'app/layout/shell.html'"></div>
         <div id="splash-page" ng-show="showSplash">
             <div class="page-splash">
                 <div class="page-splash-message">
@@ -49,6 +51,8 @@
     <script src="/bower_components/extras.angular.plus/ngplus-overlay.js"></script>
     <script src="/bower_components/toastr/toastr.js"></script>
     <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/Chart.js/Chart.js"></script>
+    <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

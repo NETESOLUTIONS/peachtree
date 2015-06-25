@@ -1,30 +1,38 @@
 <section id="dashboard-view" class="mainbar">
-    <section class="matter">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1>
-                        Graph Here
-                        <div class="table-responsive">
-                            <table class="table-striped">
-                                <thead>
-                                    <th>Rank</th>
-                                    <th>Drug</th>
-                                    <th>No. AE</th>
-                                </thead>
-                                <tbody>
-                                    
-                                </tbody>
-                            </table>                            
-                        </div>
-                    </h1>
-                </div><!--end of graph dashboard column -->
-                <div class="col-md-6">
-                    <h1>
-                        Tabs Here
-                    </h1>
-                </div><!--end of tab report column -->
-            </div>
+    <section class="matter container-fluid">
+        <div class="row">
+           <div class="col-xs-12 col-md-6">
+               <div class="row">
+                   <ul class="nav nav-pills nav-justified">
+                      <li role="presentation" class="active"><a href="#">Drugs</a></li>
+                      <li role="presentation"><a href="#">Devices</a></li>
+                      <li role="presentation"><a href="#">Food</a></li>
+                   </ul>
+               </div>
+               <div class="row">
+                   <canvas id="line" class="chart chart-bar" data="[219582,204860,169284,167516,167170]" labels="['ENBREL','REGULAR STRENGTH PAIN RELIEF','HUMIRA','ECOTRIN','BUFFERIN']" legend="true" click="onClick"></canvas> 
+               </div>
+
+            </div><!--end of tab report column -->
+            <div class="col-xs-12 col-md-6">
+                <h3>List of top 10 Drugs by reported AE's</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-condensed">
+                        <thead>
+                            <th>Rank</th>
+                            <th>Drug</th>
+                            <th>No. AE</th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in vm.drugs.results | orderBy:sortType:sortReverse">
+                                <td>{{ $index + 1 }}</td>
+                               <td>{{d.term}}</td>
+                               <td>{{d.count}}</td>
+                            </tr>
+                        </tbody>
+                    </table>                            
+                </div>
+            </div><!--end of graph dashboard column -->
         </div>
     </section>
 </section>

@@ -1,11 +1,11 @@
-<div ng-controller="ShellController as vm">
+<div class="main-content" ng-controller="ShellController as vm">
     <header>
         <ht-top-nav navline="vm.navline"></ht-top-nav>
     </header>
-    <section id="content" class="content">
+    <section id="content" class="container content">
 <!--        <div ng-include="'app/layout/sidebar.html'"></div>-->
 
-        <div ui-view class="shuffle-animation"></div>
+        <div ui-view class="shuffle-animation view-container"></div>
 
         <div ngplus-overlay
              ngplus-overlay-delay-in="50"

@@ -63,6 +63,24 @@
             }
         }
         /*
+         * Function for getting Details of AE reports
+        */
+        function getDrugDetails(name) {
+            return $http.get(drugUrl + '&count=patient.drug.openfda.brand_name.exact&limit=10')
+                .then(success)
+                .catch(fail);
+            //define success function
+            function success(response) {
+                return response.data;
+            }
+            //define fail function
+            function fail(error) {
+                var msg = 'query for top devices failed. ' + error.data.description;
+                logger.error(msg);
+                return $q.reject(msg);
+            }
+        }
+        /*
          * Function for getting list of top AE reported devices max api limit
         */
         function getDevices() {
