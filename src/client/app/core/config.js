@@ -11,9 +11,9 @@
         toastr.options.timeOut = 4000;
         toastr.options.positionClass = 'toast-bottom-right';
     }
-    
+
     // core.config(chartConfig);
-    
+
     // chartConfig.$inject = ['ChartJsProvider'];
     // /* @ngInject */
     // function chartConfig(ChartJsProvider)

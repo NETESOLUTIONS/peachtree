@@ -2,28 +2,29 @@
     <section class="matter">
         <div class="container">
             <div class="row">
-                <div class="widget wviolet">
-                    <div ht-widget-header title="List of Drugs"></div>
-                    <div class="widget-content user">
-                       <table>
-                          <tr>
-                              <th ng-click="sortType = 'term'; sortReverse = !sortReverse">Drug</th>
-                              <th ng-click="sortType = 'count'; sortReverse = !sortReverse">Side Effect Reports</th>
-                          </tr>
-                           <tr ng-repeat="d in vm.drugsTop10.results | orderBy:sortType:sortReverse">
-                               <td>{{d.term}}</td>
-                               <td>{{d.count}}</td>
-                           </tr>
-                       </table>
-<!--
-                        <h3 ng-repeat="d in vm.drugsTop10.results">
-                            {{ d.term}} - {{ d.count }}
-                        </h3>
+                <h1>List of Drugs</h1>
+                <div class="widget-content user">
+                    <table ng-show="vm.drugs.results">
+                        <thead>
+                            <tr>
+                                <th ng-click="vm.sortType = 'term'; vm.sortReverse = !vm.sortReverse">Drug <i class="fa fa-caret-up" ng-show="vm.sortType == 'term' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'term' && vm.sortReverse"></i>
+                                </th>
+                                <th ng-click="vm.sortType = 'count'; vm.sortReverse = !vm.sortReverse">Side Effect Reports <i class="fa fa-caret-up" ng-show="vm.sortType == 'count' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'count' && vm.sortReverse"></i>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in vm.drugs.results | orderBy:vm.sortType:vm.sortReverse">
+                                <td>{{d.term}}</td>
+                                <td>{{d.count}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--
+<h3 ng-repeat="d in vm.drugsTop10.results">
+{{ d.term}} - {{ d.count }}
+</h3>
 -->
-                    </div>
-                    <div class="widget-foot">
-                        <div class="clearfix"></div>
-                    </div>
                 </div>
             </div>
         </div>
