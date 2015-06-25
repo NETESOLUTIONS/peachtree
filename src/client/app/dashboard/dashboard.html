@@ -10,10 +10,9 @@
                    </ul>
                </div>
                <div class="row">
-                   <canvas id="line" class="chart chart-bar" data="[219582,204860,169284,167516,167170]" labels="['ENBREL','REGULAR STRENGTH PAIN RELIEF','HUMIRA','ECOTRIN','BUFFERIN']" legend="true" click="onClick"></canvas> 
+                   <bar-chart height="500" data="{{ vm.drugs.chartData.series }}" hovered="hovered(args)"></bar-chart>
                </div>
-
-            </div><!--end of tab report column -->
+            </div><!--end of graph report column -->
             <div class="col-xs-12 col-md-6">
                 <h3>List of top 10 Drugs by reported AE's</h3>
                 <div class="table-responsive">
@@ -32,7 +31,7 @@
                         </tbody>
                     </table>                            
                 </div>
-            </div><!--end of graph dashboard column -->
+            </div><!--end of details dashboard column -->
         </div>
     </section>
 </section>
