@@ -14,37 +14,54 @@
         vm.sortReverse = false;  // set the default sort order
         vm.searchFilter = '';     // set the default search/filter term
         vm.changeItem = changeItem;
-        vm.activeSelection = 'drugs';
-        vm.drugs = [];
+        vm.activeSelection = 'Drugs';
+        vm.data = [];
         vm.chartData = {
             labels: [],
             series: [
                 []
             ]
         };
-
+        //Initial activation
         activate();
 
         function activate() {
-            var promises = [getTop10Drugs()];
+            var promises = [getTop10()];
             return $q.all(promises).then(function() {
                 logger.info('Activated Dashboard View');
             });
         }
+        //Reload the view
+        function reload(name) {
+            var promises = [getTop10()];
+            var activeItem = name;
+            return $q.all(promises).then(function() {
+                logger.info('Data loaded for ' + activeItem);
+            });
+        }
         //Click function to change data
         function changeItem(item) {
-            console.log(item);
+            vm.activeSelection = item;
+            reload(item);
         }
         //Get listing of top 10 drugs (by AE) from the API
-        function getTop10Drugs() {
-            return dataservice.getTop10Drugs().then(function (data) {
-                vm.drugs = data.results;
-                for (var i = 0; i < vm.drugs.length; i++) {
-                    vm.drugs[i].rank = i + 1;
-                    vm.chartData.labels[i] = vm.drugs[i].term;
-                    vm.chartData.series[0][i] = vm.drugs[i].count;
+        function getTop10() {
+            var functionCall;
+            //Determine which dataservice to use
+            if (vm.activeSelection === 'Drugs') {
+                functionCall = dataservice.getTop10Drugs();
+            } else if (vm.activeSelection === 'Devices') {
+                functionCall = dataservice.getTop10Devices();
+            }
+            //Return data based on selection
+            return functionCall.then(function (data) {
+                vm.data = data.results;
+                for (var i = 0; i < vm.data.length; i++) {
+                    vm.data[i].rank = i + 1;
+                    vm.chartData.labels[i] = vm.data[i].term;
+                    vm.chartData.series[0][i] = vm.data[i].count;
                 }
-                return vm.drugs;
+                return vm.data;
             });
         }
     }

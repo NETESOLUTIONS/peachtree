@@ -76,7 +76,7 @@
     "mocha-clean": "^0.4.0",
     "morgan": "^1.1.1",
     "node-notifier": "^4.0.3",
-    "pg": "4.x",
+    "pg": "^4.4.0",
     "phantomjs": "1.9.16",
     "plato": "^1.2.0",
     "q": "^1.0.1",
