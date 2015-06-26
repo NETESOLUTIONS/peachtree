@@ -3,7 +3,6 @@
 
     angular.module('app.dashboard', [
         'app.core',
-        'app.widgets',
-        'chart.js'
+        'app.widgets'
       ]);
 })();
