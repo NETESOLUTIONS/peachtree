@@ -1,13 +1,13 @@
 #Digital Services Playbook Checklist
 1. Play 1: Understand what people need
     * Checklist:
-        - [x ] Early in the project, spend time with current and prospective users of the service
-        - [x ] Use a range of qualitative and quantitative research methods to determine people’s goals, needs, and behaviors; be thoughtful about the time spent
-        - [x ] Test prototypes of solutions with real people, in the field if possible
-        - [x ] Document the findings about user goals, needs, behaviors, and preferences
-        - [x ] Share findings with the team and agency leadership
-        - [x ] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
-        - [x ] As the digital service is being built, regularly test it with potential users to ensure it meets people’s needs 
+        - [x] Early in the project, spend time with current and prospective users of the service
+        - [x] Use a range of qualitative and quantitative research methods to determine people’s goals, needs, and behaviors; be thoughtful about the time spent
+        - [x] Test prototypes of solutions with real people, in the field if possible
+        - [x] Document the findings about user goals, needs, behaviors, and preferences
+        - [x] Share findings with the team and agency leadership
+        - [x] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
+        - [x] As the digital service is being built, regularly test it with potential users to ensure it meets people’s needs 
     * Key Questions:
         * Who are your primary users?
             * 
@@ -27,8 +27,8 @@
             * Daily. 
 2. Play 2: Address the whole experience, from start to finish
     * Checklist:
-        - [x ] Understand the different points at which people will interact with the service – both online and in person
-        - [x ] Identify pain points in the current way users interact with the service, and prioritize these according to user needs
+        - [x] Understand the different points at which people will interact with the service – both online and in person
+        - [x] Identify pain points in the current way users interact with the service, and prioritize these according to user needs
         - [ ] Design the digital parts of the service so that they are integrated with the offline touch points people use to interact with the service
         - [ ] Develop metrics that will measure how well the service is meeting user needs at each step of the service
     * Key Questions:
@@ -62,14 +62,14 @@
             * 
 4. Play 4: Build the service using agile and iterative practices
     * Checklist:
-        - [x ] Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible, no longer than three months from the beginning of the project, using a “beta” or “test” period if needed
-        - [x ] Run usability tests frequently to see how well the service works and identify improvements that should be made
-        - [x ] Ensure the individuals building the service communicate closely using techniques such as launch meetings, war rooms, daily standups, and team chat tools
+        - [x] Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible, no longer than three months from the beginning of the project, using a “beta” or “test” period if needed
+        - [x] Run usability tests frequently to see how well the service works and identify improvements that should be made
+        - [x] Ensure the individuals building the service communicate closely using techniques such as launch meetings, war rooms, daily standups, and team chat tools
         - [ ] Keep delivery teams small and focused; limit organizational layers that separate these teams from the business owners
-        - [x ] Release features and improvements multiple times each month
-        - [x ] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
+        - [x] Release features and improvements multiple times each month
+        - [x] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
         - [ ] Use a source code version control system
-        - [x ] Give the entire project team access to the issue tracker and version control system 
+        - [x] Give the entire project team access to the issue tracker and version control system 
         - [ ] Use code reviews to ensure quality          
     * Key Questions:
         * How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
