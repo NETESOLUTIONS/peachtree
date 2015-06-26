@@ -31,12 +31,10 @@
                 logger.info('Activated Dashboard View');
             });
         }
-        
         //Click function to change data
-        function changeItem() {
-            alert(clicked);
+        function changeItem(item) {
+            console.log(item);
         }
-
         //Get listing of top 10 drugs (by AE) from the API
         function getTop10Drugs() {
             return dataservice.getTop10Drugs().then(function (data) {

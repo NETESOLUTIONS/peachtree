@@ -15,10 +15,10 @@
 <div class="header low">
     <h1>Code coverage report for <span class="entity">app/core/dataservice.js</span></h1>
     <h2>
-        Statements: <span class="metric">45.61% <small>(26 / 57)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">48.72% <small>(19 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Functions: <span class="metric">9.52% <small>(2 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Lines: <span class="metric">46.43% <small>(26 / 56)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">14.29% <small>(2 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">48.72% <small>(19 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
     <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">app/core/</a> &#187; dataservice.js</div>
@@ -123,47 +123,7 @@
 96
 97
 98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+99</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -186,47 +146,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -318,17 +238,13 @@
     /* @ngInject */
     function dataservice($http, $q, logger) {
         var service = {
-            getPeople: getPeople,
             getDrugs: getDrugs,
             getTop10Drugs: getTop10Drugs,
             getDevices: getDevices,
-            getTop10Devices: getTop10Devices,
-            getMessageCount: getMessageCount
+            getTop10Devices: getTop10Devices
         };
 &nbsp;
         return service;
-&nbsp;
-<span class="fstat-no" title="function not covered" >        function getMessageCount() {</span> <span class="cstat-no" title="statement not covered" >return $q.when(42); </span>}
         /*
          * Function for getting list of top AE reported drugs max api limit
         */
@@ -366,28 +282,10 @@
             }
         }
         /*
-         * Function for getting Details of AE reports
-        */
-<span class="fstat-no" title="function not covered" >        function getDrugDetails(name) {</span>
-<span class="cstat-no" title="statement not covered" >            return $http.get(drugUrl + '&amp;count=patient.drug.openfda.brand_name.exact&amp;limit=10')</span>
-                .then(success)
-                .catch(fail);
-            //define success function
-<span class="fstat-no" title="function not covered" >            function success(response) {</span>
-<span class="cstat-no" title="statement not covered" >                return response.data;</span>
-            }
-            //define fail function
-<span class="fstat-no" title="function not covered" >            function fail(error) {</span>
-<span class="cstat-no" title="statement not covered" >                var msg = 'query for top devices failed. ' + error.data.description;</span>
-<span class="cstat-no" title="statement not covered" >                logger.error(msg);</span>
-<span class="cstat-no" title="statement not covered" >                return $q.reject(msg);</span>
-            }
-        }
-        /*
          * Function for getting list of top AE reported devices max api limit
         */
 <span class="fstat-no" title="function not covered" >        function getDevices() {</span>
-<span class="cstat-no" title="statement not covered" >            return $http.get(deviceUrl + '&amp;count=patient.drug.medicinalproduct.exact&amp;limit=1000')</span>
+<span class="cstat-no" title="statement not covered" >            return $http.get(deviceUrl + '&amp;count=device.brand_name.exact&amp;limit=1000')</span>
                 .then(success)
                 .catch(fail);
             //define success function
@@ -405,7 +303,7 @@
          * Function for getting list of top AE reported devices limit to top 10
         */
 <span class="fstat-no" title="function not covered" >        function getTop10Devices() {</span>
-<span class="cstat-no" title="statement not covered" >            return $http.get(deviceUrl + '&amp;count=patient.drug.medicinalproduct.exact&amp;limit=10')</span>
+<span class="cstat-no" title="statement not covered" >            return $http.get(deviceUrl + '&amp;count=device.brand_name.exact&amp;limit=10')</span>
                 .then(success)
                 .catch(fail);
             //define success function
@@ -419,24 +317,6 @@
 <span class="cstat-no" title="statement not covered" >                return $q.reject(msg);</span>
             }
         }
-        /*
-         * Example getter function for getting people. Need to remove when up and running
-        */
-<span class="fstat-no" title="function not covered" >        function getPeople() {</span>
-<span class="cstat-no" title="statement not covered" >            return $http.get('/api/people')</span>
-                .then(success)
-                .catch(fail);
-            //define success function
-<span class="fstat-no" title="function not covered" >            function success(response) {</span>
-<span class="cstat-no" title="statement not covered" >                return response.data;</span>
-            }
-            //define fail function
-<span class="fstat-no" title="function not covered" >            function fail(error) {</span>
-<span class="cstat-no" title="statement not covered" >                var msg = 'query for people failed. ' + error.data.description;</span>
-<span class="cstat-no" title="statement not covered" >                logger.error(msg);</span>
-<span class="cstat-no" title="statement not covered" >                return $q.reject(msg);</span>
-            }
-        }
     }
 })();
 &nbsp;</pre></td></tr>
@@ -444,7 +324,7 @@
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 26 2015 03:37:36 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 26 2015 04:31:52 GMT+0000 (UTC)</div>
 </div>
 <script src="../../prettify.js"></script>
 <script>
