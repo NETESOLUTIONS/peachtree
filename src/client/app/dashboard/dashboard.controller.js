@@ -25,6 +25,15 @@
         //Initial activation
         activate();
 
+        function hideChart() {
+            $('chartist').addClass('out');
+        }
+        function showChart() {
+            setTimeout( function() {
+                $('chartist').removeClass('out');
+            }, 10);
+        }
+
         function activate() {
             var promises = [getTop10()];
             return $q.all(promises).then(function() {
@@ -53,16 +62,20 @@
             } else if (vm.activeSelection === 'Devices') {
                 functionCall = dataservice.getTop10Devices();
             }
-            //Return data based on selection
-            return functionCall.then(function (data) {
-                vm.data = data.results;
-                for (var i = 0; i < vm.data.length; i++) {
-                    vm.data[i].rank = i + 1;
-                    vm.chartData.labels[i] = vm.data[i].term;
-                    vm.chartData.series[0][i] = vm.data[i].count;
-                }
-                return vm.data;
-            });
+            hideChart();
+            setTimeout( function() {
+                //Return data based on selection
+                return functionCall.then(function (data) {
+                    vm.data = data.results;
+                    for (var i = 0; i < vm.data.length; i++) {
+                        vm.data[i].rank = i + 1;
+                        vm.chartData.labels[i] = vm.data[i].term;
+                        vm.chartData.series[0][i] = vm.data[i].count;
+                    }
+                    showChart();
+                    return vm.data;
+                });
+            },300);
         }
     }
 })();
