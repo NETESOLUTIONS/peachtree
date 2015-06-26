@@ -22,8 +22,10 @@ var mockData = (function() {
         ];
     }
     /* Get Mock datasets for testing */
+    
     function getMockDrugs() {
-        return [
+        var results = [];
+        results = [
                 {term: 'ENBREL', count: 216013},
                 {term: 'HUMIRA', count: 167800},
                 {term: 'ASPIRIN', count: 166051},
@@ -35,5 +37,6 @@ var mockData = (function() {
                 {term: 'PREDNISONE', count: 78508},
                 {term: 'NEXIUM', count: 76533}
         ];
+        return results;
     }
 })();

@@ -25,6 +25,7 @@ html body {
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     background-color: #ebebeb;
 }
 
@@ -38,12 +39,12 @@ h6 {
 }
 
 .shell .main-content {
-    height:100vh;
+    height:100%;
     width:100vw;
 }
 
 .content .mainbar .matter {
-    min-height:100vh;
+    min-height:100%;
 }
 
 table {
@@ -126,6 +127,38 @@ table {
 }
 
 
+/******************************************************************
+ *
+ * Nabar Pills Overrides
+ *
+ ******************************************************************/
+ .brown {
+   .active a,
+    .active a:hover {
+        color: #fff !important;
+        background-color: @color_nav !important;
+    }
+    a {
+        color: @color_nav !important;
+    }
+ }
+
+/******************************************************************
+ *
+ * Chart styles
+ *
+ ******************************************************************/
+ 
+ .chart {
+     padding-top: 5rem;
+     height:35rem;
+ }
+ 
+ .ct-series.ct-series-a{
+     line {
+        stroke: @color_main;   
+     }
+ }
 /******************************************************************
  *
  * Animations and supporting styles
