@@ -4,7 +4,7 @@
             <div class="row">
                 <h1>List of Drugs</h1>
                 <div class="widget-content user">
-                    <table ng-show="vm.drugs.results">
+                    <table class="table table-condensed table-sort" ng-show="vm.drugs.results">
                         <thead>
                             <tr>
                                 <th ng-click="vm.sortType = 'term'; vm.sortReverse = !vm.sortReverse">Drug <i class="fa fa-caret-up" ng-show="vm.sortType == 'term' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'term' && vm.sortReverse"></i>

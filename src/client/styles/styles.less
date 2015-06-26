@@ -25,7 +25,6 @@ html body {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #ebebeb;
 }
 
@@ -83,6 +82,18 @@ table {
         background-color: #fff;
         border-bottom: 1px solid #f2f2f2;
     }
+    &.table-sort {
+        th {
+            position: relative;
+            padding-right: 10px;
+            cursor: pointer;
+            i {
+                position: absolute;
+                top: 0.8rem;
+                margin-left: 0.4rem;
+            }
+        }
+    }
 }
 
 
@@ -93,6 +104,7 @@ table {
  ******************************************************************/
 .navbar {
     background-color: @color_nav;
+    background: linear-gradient(to bottom, @color_nav 0%,lighten(@color_nav, 12%) 100%);
     color: #fff;
     border: none;
     border-radius: 0;
@@ -148,17 +160,27 @@ table {
  * Chart styles
  *
  ******************************************************************/
- 
+
  .chart {
-     padding-top: 5rem;
-     height:35rem;
+     padding-top: 1.6rem;
+//     height:35rem;
  }
- 
- .ct-series.ct-series-a{
-     line {
-        stroke: @color_main;   
-     }
- }
+
+chartist {
+    display: block;
+    padding-bottom: 10px;
+    height: 342px;
+    background-color: #fff;
+    border-radius: 8px;
+    .ct-series.ct-series-a {
+        line {
+            stroke: #f47f4b;
+        }
+    }
+    .ct-label {
+        color: @color_nav;
+    }
+}
 /******************************************************************
  *
  * Animations and supporting styles
@@ -168,8 +190,8 @@ table {
 /*#region wrapper for angular ng-include and ng-view animations*/
 .view-container {
    position: relative;
-   min-height:100vh;
-   overflow: hidden;
+//   min-height:100vh;
+//   overflow: hidden;
 }
 /*#endregion */
 
