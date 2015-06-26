@@ -36,7 +36,7 @@
             var promises = [getTop10()];
             var activeItem = name;
             return $q.all(promises).then(function() {
-               logger.info('Data loaded for ' + activeItem); 
+                logger.info('Data loaded for ' + activeItem);
             });
         }
         //Click function to change data
