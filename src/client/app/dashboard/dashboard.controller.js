@@ -9,12 +9,13 @@
     /* @ngInject */
     function DashboardController($q, dataservice, logger) {
         var vm = this;
-        vm.drugs = [];
-        vm.drugs.chartData = [];
         vm.title = 'Dashboard';
         vm.sortType = 'rank'; // set the default sort type
         vm.sortReverse = false;  // set the default sort order
         vm.searchFilter = '';     // set the default search/filter term
+        vm.changeItem = changeItem;
+        vm.activeSelection = 'drugs';
+        vm.drugs = [];
         vm.chartData = {
             labels: [],
             series: [
@@ -29,6 +30,11 @@
             return $q.all(promises).then(function() {
                 logger.info('Activated Dashboard View');
             });
+        }
+        
+        //Click function to change data
+        function changeItem() {
+            alert(clicked);
         }
 
         //Get listing of top 10 drugs (by AE) from the API

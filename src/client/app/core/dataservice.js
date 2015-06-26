@@ -15,17 +15,13 @@
     /* @ngInject */
     function dataservice($http, $q, logger) {
         var service = {
-            getPeople: getPeople,
             getDrugs: getDrugs,
             getTop10Drugs: getTop10Drugs,
             getDevices: getDevices,
-            getTop10Devices: getTop10Devices,
-            getMessageCount: getMessageCount
+            getTop10Devices: getTop10Devices
         };
 
         return service;
-
-        function getMessageCount() { return $q.when(42); }
         /*
          * Function for getting list of top AE reported drugs max api limit
         */
@@ -63,28 +59,10 @@
             }
         }
         /*
-         * Function for getting Details of AE reports
-        */
-        function getDrugDetails(name) {
-            return $http.get(drugUrl + '&count=patient.drug.openfda.brand_name.exact&limit=10')
-                .then(success)
-                .catch(fail);
-            //define success function
-            function success(response) {
-                return response.data;
-            }
-            //define fail function
-            function fail(error) {
-                var msg = 'query for top devices failed. ' + error.data.description;
-                logger.error(msg);
-                return $q.reject(msg);
-            }
-        }
-        /*
          * Function for getting list of top AE reported devices max api limit
         */
         function getDevices() {
-            return $http.get(deviceUrl + '&count=patient.drug.medicinalproduct.exact&limit=1000')
+            return $http.get(deviceUrl + '&count=device.brand_name.exact&limit=1000')
                 .then(success)
                 .catch(fail);
             //define success function
@@ -102,7 +80,7 @@
          * Function for getting list of top AE reported devices limit to top 10
         */
         function getTop10Devices() {
-            return $http.get(deviceUrl + '&count=patient.drug.medicinalproduct.exact&limit=10')
+            return $http.get(deviceUrl + '&count=device.brand_name.exact&limit=10')
                 .then(success)
                 .catch(fail);
             //define success function
@@ -112,24 +90,6 @@
             //define fail function
             function fail(error) {
                 var msg = 'query for top drugs failed. ' + error.data.description;
-                logger.error(msg);
-                return $q.reject(msg);
-            }
-        }
-        /*
-         * Example getter function for getting people. Need to remove when up and running
-        */
-        function getPeople() {
-            return $http.get('/api/people')
-                .then(success)
-                .catch(fail);
-            //define success function
-            function success(response) {
-                return response.data;
-            }
-            //define fail function
-            function fail(error) {
-                var msg = 'query for people failed. ' + error.data.description;
                 logger.error(msg);
                 return $q.reject(msg);
             }
