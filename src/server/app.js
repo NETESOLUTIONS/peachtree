@@ -80,6 +80,6 @@ app.get('/db', function (request, response) {
             } else {
                 response.send(result.rows);
             }
+        });
     });
-  });
 });
