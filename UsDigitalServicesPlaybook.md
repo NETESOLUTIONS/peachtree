@@ -1,43 +1,43 @@
 #Digital Services Playbook Checklist
 1. Play 1: Understand what people need
     * Checklist:
-        - [ ] Early in the project, spend time with current and prospective users of the service
-        - [ ] Use a range of qualitative and quantitative research methods to determine people’s goals, needs, and behaviors; be thoughtful about the time spent
-        - [ ] Test prototypes of solutions with real people, in the field if possible
-        - [ ] Document the findings about user goals, needs, behaviors, and preferences
-        - [ ] Share findings with the team and agency leadership
-        - [ ] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
-        - [ ] As the digital service is being built, regularly test it with potential users to ensure it meets people’s needs 
+        - [x ] Early in the project, spend time with current and prospective users of the service
+        - [x ] Use a range of qualitative and quantitative research methods to determine people’s goals, needs, and behaviors; be thoughtful about the time spent
+        - [x ] Test prototypes of solutions with real people, in the field if possible
+        - [x ] Document the findings about user goals, needs, behaviors, and preferences
+        - [x ] Share findings with the team and agency leadership
+        - [x ] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
+        - [x ] As the digital service is being built, regularly test it with potential users to ensure it meets people’s needs 
     * Key Questions:
         * Who are your primary users?
             * 
         * What user needs will this service address?
-            * 
+            * This web service, 'peachtree,' is a place for a user to easily and efficently sort through drugs and their                 corresponding after effects with a reported count/rate.  
         * Why does the user want or need this service?
-            * 
+            * Peachtree will be a good first stop during the prescription decision-making process, or to crosscheck any                  unintended consequences after an intial prescription. 
         * Which people will have the most difficulty with the service?
-            * 
+            * We follow user-centered design principals with the hope that all user actions will be intuitive. 
         * Which research methods were used?
-            * 
+            * A/B, Usabilty, User Experience, Expert, Build, and Speed Testing were all used to progress from strat to                   finish. 
         * What were the key findings?
             * 
         * How were the findings documented? Where can future team members access the documentation?
-            * 
+            * Key finding were documented with comprehensive write-ups, styored as User Testing by version number and stored                 in correspnding Github repo main page. 
         * How often are you testing with real people?
-            * 
+            * Daily. 
 2. Play 2: Address the whole experience, from start to finish
     * Checklist:
-        - [ ] Understand the different points at which people will interact with the service – both online and in person
-        - [ ] Identify pain points in the current way users interact with the service, and prioritize these according to user needs
+        - [x ] Understand the different points at which people will interact with the service – both online and in person
+        - [x ] Identify pain points in the current way users interact with the service, and prioritize these according to user needs
         - [ ] Design the digital parts of the service so that they are integrated with the offline touch points people use to interact with the service
         - [ ] Develop metrics that will measure how well the service is meeting user needs at each step of the service
     * Key Questions:
         * What are the different ways (both online and offline) that people currently accomplish the task the digital service is designed to help with?
-            * 
+            * There is no readily available perscription drug after effects database. One would have to consult a doctor or              expert on the drug. One could also get this information from medical journals for which you must pay a premium. 
         * Where are user pain points in the current way people accomplish the task?
-            * 
+            * Inefficiency. To find this data you either have to know your destination or wade through a lot of bloated                  information which is unessecasry for the above defined user of this service, eg, definitions, picture, etc. 
         * Where does this specific project fit into the larger way people currently obtain the service being offered?
-            * 
+            * Peachtree would help medical professions bypass websites with too much information. The list with related after             effects is easier to referece and sort. 
         * What metrics will best indicate how well the service is working for its users?
             * 
 3. Play 3: Make it simple and intuitive
@@ -51,25 +51,25 @@
         - [ ] Use language and design consistently throughout the service, including online and offline touch points 
     * Key Questions:
         * What primary tasks are the user trying to accomplish?
-            * 
+            * Access a list of drugs, an item detail page for selected drug, and a dynamic visual of summary                             counts/statistics. 
         * Is the language as plain and universal as possible?
             * 
         * Why does the user want or need this service?
-            * 
+            * The user wants this service so that he or she may efficiently access a drug database, see their documented                after effects, and then cross check with patient or project history and see if the drug is compatible. 
         * What languages is your service offered in?
             * 
         * How does the service’s design visually relate to other government services?
             * 
 4. Play 4: Build the service using agile and iterative practices
     * Checklist:
-        - [ ] Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible, no longer than three months from the beginning of the project, using a “beta” or “test” period if needed
-        - [ ] Run usability tests frequently to see how well the service works and identify improvements that should be made
-        - [ ] Ensure the individuals building the service communicate closely using techniques such as launch meetings, war rooms, daily standups, and team chat tools
+        - [x ] Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible, no longer than three months from the beginning of the project, using a “beta” or “test” period if needed
+        - [x ] Run usability tests frequently to see how well the service works and identify improvements that should be made
+        - [x ] Ensure the individuals building the service communicate closely using techniques such as launch meetings, war rooms, daily standups, and team chat tools
         - [ ] Keep delivery teams small and focused; limit organizational layers that separate these teams from the business owners
-        - [ ] Release features and improvements multiple times each month
-        - [ ] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
+        - [x ] Release features and improvements multiple times each month
+        - [x ] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
         - [ ] Use a source code version control system
-        - [ ] Give the entire project team access to the issue tracker and version control system 
+        - [x ] Give the entire project team access to the issue tracker and version control system 
         - [ ] Use code reviews to ensure quality          
     * Key Questions:
         * How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
@@ -77,19 +77,19 @@
         * How long does it take for a production deployment?
             * 
         * How many days or weeks are in each iteration/sprint?
-            * 
+            * It depends on the clients needs, but the usual is two weeks. 
         * Which version control system is being used?
-            * 
+            * Github. 
         * How are bugs tracked and tickets issued? What tool is used?
-            * 
+            * We use Github to task and track issues. The task/issue become formalized in github as soon a developer or                  product owner brings it to the task managers attention.   
         * How is the feature backlog managed? What tool is used?
-            * 
+            * We use Github to move issues from milestone/sprint to milestone/sprint or put it into the undated 'backlog'                milestone. The issues are stored there and are not forgotten. 
         * How often do you review and reprioritize the feature and bug backlog?
-            * 
+            * Depends on the work load or importance - from daily to weekly. 
         * How do you collect user feedback during development? How is that feedback used to improve the service?
             * 
         * At each stage of usability testing, which gaps were identified in addressing user needs?
-            * 
+            * Backend architecture, frontend human-centered design, visualization stubbles or successes, and user interface              and usability. 
 5. Play 5: Structure budgets and contracts to support delivery
     * Checklist:
         - [ ] Budget includes research, discovery, and prototyping activities
@@ -105,7 +105,7 @@
         * What is the scope of the project? What are the key deliverables?
             * 
         * What are the milestones? How frequent are they?
-            * 
+            * In Github, our milestones line up with either sprints, delivery deadlines, or both. 
         * What are the performance metrics defined in the contract (e.g., response time, system uptime, time period to address priority issues)?
             * 
 6. Play 6: Assign one leader and hold that person accountable

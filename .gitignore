@@ -3,6 +3,12 @@
 /build
 .tmp
 .DS_Store
+/src/.DS_Store
+/src/client/.DS_Store
 npm-debug.log
 /*.env
 /report
+
+src/client/.DS_Store
+
+src/.DS_Store
