@@ -12,7 +12,7 @@ if (!Function.prototype.bind) {
             // closest thing possible to the ECMAScript 5
             // internal IsCallable function
             var msg = 'Function.prototype.bind - what is trying to be bound is not callable';
-            throw new TypeError(msg);
+            throw-fluid new TypeError(msg);
         }
 
         var aArgs = Array.prototype.slice.call(arguments, 1),

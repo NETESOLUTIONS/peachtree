@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.dashboard')
+        .module('app.dashboard', ['angular-chartist'])
         .controller('DashboardController', DashboardController);
 
     DashboardController.$inject = ['$q', 'dataservice', 'logger'];
@@ -14,6 +14,16 @@
         vm.sortType = 'rank'; // set the default sort type
         vm.sortReverse = false;  // set the default sort order
         vm.searchFilter = '';     // set the default search/filter term
+        vm.chartData = {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            series: [
+                [5, 4, 3, 7, 5, 10, 3]
+            ]
+        },
+        {
+            fullWidth: true,
+            scaleMinSpace: 200
+        };
 
         activate();
 

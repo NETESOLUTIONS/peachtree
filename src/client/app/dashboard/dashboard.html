@@ -1,16 +1,16 @@
 <section id="dashboard-view" class="mainbar">
     <section class="matter container-fluid">
-        <div class="row">
+        <div class="row-fluid">
            <div class="col-xs-12 col-md-6">
-               <div class="row">
+               <div class="row-fluid">
                    <ul class="nav nav-pills nav-justified">
                       <li role="presentation" class="active"><a href="#">Drugs</a></li>
                       <li role="presentation"><a href="#">Devices</a></li>
                       <li role="presentation"><a href="#">Food</a></li>
                    </ul>
                </div>
-               <div class="row">
-                   <canvas id="line" class="chart chart-bar" data="[219582,204860,169284,167516,167170]" labels="['ENBREL','REGULAR STRENGTH PAIN RELIEF','HUMIRA','ECOTRIN','BUFFERIN']" legend="true" click="onClick"></canvas>
+               <div class="row-fluid chart">
+                   <chartist class="ct-chart" chartist-data="vm.chartData" chartist-chart-type="Bar"></chartist>
                </div>
 
             </div><!--end of tab report column -->

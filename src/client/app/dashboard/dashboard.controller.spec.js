@@ -2,7 +2,7 @@
 describe('DashboardController', function() {
     var controller;
     var people = mockData.getMockPeople();
-    var drugs = mockData.getMockDrugs();
+    var drugs = mockData.getMockDrugsTop10();
 
     beforeEach(function() {
         bard.appModule('app.dashboard');
