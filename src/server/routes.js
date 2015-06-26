@@ -5,8 +5,8 @@ var data = require('./data');
 
 router.get('/people', getPeople);
 router.get('/person/:id', getPerson);
-router.get('/*', four0four.notFoundMiddleware);
 router.get('/data', getData);
+router.get('/*', four0four.notFoundMiddleware);
 
 module.exports = router;
 
