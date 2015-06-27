@@ -19,14 +19,14 @@ function getData(req, res, next) {
     }
     
     if (process.env.DATABASE_URL === undefined) {
-        reportError("Please define DATABASE_URL environment variable");
+        reportError('Please define DATABASE_URL environment variable');
     } else {
-        console.log("Connecting to " + process.env.DATABASE_URL + "...");
+        console.log('Connecting to ' + process.env.DATABASE_URL + '...');
         pg.connect(process.env.DATABASE_URL, function (err, client, done) {
             if (err) {
                 reportError(err);    
             } else {
-                console.log("Connected.");
+                console.log('Connected.');
                 client.query('SELECT * FROM test_table', function (err, res) {
                     done();
                     if (err) {
