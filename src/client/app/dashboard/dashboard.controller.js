@@ -24,15 +24,16 @@
         };
         //Initial activation
         activate();
-
-        function hideChart() {
-            $('chartist').addClass('out');
-        }
-        function showChart() {
-            setTimeout( function() {
-                $('chartist').removeClass('out');
-            }, 10);
-        }
+        // Is this for chart animations?
+        // todo: Refactor this to make not use JQuery
+        // function hideChart() {
+        //     $('chartist').addClass('out');
+        // }
+        // function showChart() {
+        //     setTimeout( function() {
+        //         $('chartist').removeClass('out');
+        //     }, 10);
+        // }
 
         function activate() {
             var promises = [getTop10()];
@@ -62,20 +63,21 @@
             } else if (vm.activeSelection === 'Devices') {
                 functionCall = dataservice.getTop10Devices();
             }
-            hideChart();
-            setTimeout( function() {
-                //Return data based on selection
-                return functionCall.then(function (data) {
-                    vm.data = data.results;
-                    for (var i = 0; i < vm.data.length; i++) {
-                        vm.data[i].rank = i + 1;
-                        vm.chartData.labels[i] = vm.data[i].term;
-                        vm.chartData.series[0][i] = vm.data[i].count;
-                    }
-                    showChart();
-                    return vm.data;
-                });
-            },300);
+            // todo see comment line 29
+            // hideChart();
+            //Return data based on selection
+            return functionCall.then(function (data) {
+                vm.data = data;
+                console.log(vm.data);
+                for (var i = 0; i < vm.data.length; i++) {
+                    vm.data[i].rank = i + 1;
+                    vm.chartData.labels[i] = vm.data[i].term;
+                    vm.chartData.series[0][i] = vm.data[i].count;
+                }
+                // todo see comment line 29
+                // showChart();
+                return vm.data;
+            });
         }
     }
 })();

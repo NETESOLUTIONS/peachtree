@@ -31,7 +31,7 @@
                 .catch(fail);
             //define success function
             function success(response) {
-                return response.data;
+                return response.data.results;
             }
             //define fail function
             function fail(error) {
@@ -49,7 +49,7 @@
                 .catch(fail);
             //define success function
             function success(response) {
-                return response.data;
+                return response.data.results;
             }
             //define fail function
             function fail(error) {
@@ -67,7 +67,7 @@
                 .catch(fail);
             //define success function
             function success(response) {
-                return response.data;
+                return response.data.results;
             }
             //define fail function
             function fail(error) {
@@ -85,7 +85,7 @@
                 .catch(fail);
             //define success function
             function success(response) {
-                return response.data;
+                return response.data.results;
             }
             //define fail function
             function fail(error) {
