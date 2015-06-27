@@ -17,7 +17,7 @@ function getData(req, res, next) {
         console.error(err);
         res.send('Error in database operation:<br/><pre>' + err + '</pre>');
     }
-    
+
     try {
         if (process.env.DATABASE_URL === undefined) {
             reportError('Please define DATABASE_URL environment variable');
@@ -39,7 +39,7 @@ function getData(req, res, next) {
                 }
             });
         }
-    } catch(err) {
+    } catch (err) {
         reportError(err);
     }
 }
