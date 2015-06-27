@@ -68,10 +68,14 @@
             //Return data based on selection
             return functionCall.then(function (data) {
                 vm.data = data;
-                console.log(vm.data);
                 for (var i = 0; i < vm.data.length; i++) {
                     vm.data[i].rank = i + 1;
-                    vm.chartData.labels[i] = vm.data[i].term;
+                    if (vm.data[i].term.length === 0 || !vm.data[i].term.trim()) {
+                        vm.data[i].term = 'No Value Reported';
+                        vm.chartData.labels[i] = 'No Value';
+                    } else {
+                        vm.chartData.labels[i] = vm.data[i].term;
+                    }
                     vm.chartData.series[0][i] = vm.data[i].count;
                 }
                 // todo see comment line 29

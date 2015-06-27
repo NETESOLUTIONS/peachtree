@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.dashboard')
+        .module('app.food')
         .run(appRun);
 
     appRun.$inject = ['routerHelper'];
@@ -14,16 +14,16 @@
     function getStates() {
         return [
             {
-                state: 'dashboard',
+                state: 'food',
                 config: {
-                    url: '/',
-                    templateUrl: 'app/dashboard/dashboard.html',
-                    controller: 'DashboardController',
+                    url: '/food',
+                    templateUrl: 'app/foods/food.html',
+                    controller: 'FoodController',
                     controllerAs: 'vm',
-                    title: 'dashboard',
+                    title: 'Food',
                     settings: {
-                        nav: 1,
-                        content: 'Adverse Events'
+                        nav: 2,
+                        content: 'Food'
                     }
                 }
             }

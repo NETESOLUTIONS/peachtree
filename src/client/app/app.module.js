@@ -5,6 +5,7 @@
         'app.widgets',
         'app.dashboard',
         'app.drugs',
+        'app.food',
         'app.layout'
     ]);
 

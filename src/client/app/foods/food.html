@@ -1,0 +1,35 @@
+<section id="food-view" class="mainbar">
+    <section class="matter container-fluid">
+        <div class="row">
+           <div class="col-xs-12 col-md-6">
+               <div class="row-fluid chart">
+                   <chartist class="ct-chart" chartist-data="vm.chartData" chartist-chart-type="Bar"></chartist>
+               </div>
+            </div><!--end of graph report column -->
+            <div class="col-xs-12 col-md-6">
+                <h5>List of top 10 States by Enforcement Actions</h5>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-sort">
+                        <thead>
+                            <tr>
+                                <th ng-click="vm.sortType = 'rank'; vm.sortReverse = !vm.sortReverse">Rank <i class="fa fa-caret-up" ng-show="vm.sortType == 'rank' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'rank' && vm.sortReverse"></i>
+                                </th>
+                                <th ng-click="vm.sortType = 'term'; vm.sortReverse = !vm.sortReverse">State <i class="fa fa-caret-up" ng-show="vm.sortType == 'term' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'term' && vm.sortReverse"></i>
+                                </th>
+                                <th ng-click="vm.sortType = 'count'; vm.sortReverse = !vm.sortReverse">No. AE <i class="fa fa-caret-up" ng-show="vm.sortType == 'count' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'count' && vm.sortReverse"></i>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in vm.data | orderBy:vm.sortType:vm.sortReverse" class="flip">
+                               <td>{{d.rank}}</td>
+                               <td>{{d.term}}</td>
+                               <td>{{d.count}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!--end of details dashboard column -->
+        </div>
+    </section>
+</section>

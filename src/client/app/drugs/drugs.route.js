@@ -16,14 +16,14 @@
             {
                 state: 'drugs',
                 config: {
-                    url: '/',
+                    url: '/drugs',
                     templateUrl: 'app/drugs/drugs.html',
                     controller: 'DrugsController',
                     controllerAs: 'vm',
                     title: 'drugs',
                     settings: {
                         nav: 3,
-                        content: '<i class="fa fa-flask"></i> Drugs'
+                        content: 'Drugs'
                     }
                 }
             }

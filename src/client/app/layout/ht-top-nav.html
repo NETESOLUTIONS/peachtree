@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav ng-controller="TopnavController as vm" class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -12,19 +12,11 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
-                <li>
-                    <a ui-sref="dashboard" href="/">Adverse Events</a>
-                </li>
-                <li>
-                    <a ui-sref="drugs" href="/">Food Recalls</a>
-                </li>
-                <!--
                 <li ng-class="vm.isCurrent(r)"
                     ng-repeat="r in vm.navRoutes">
                     <a ui-sref="{{r.name}}"
                        ng-bind-html="r.settings.content"></a>
                 </li>
--->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>

@@ -12,12 +12,6 @@
         vm.busyMessage = 'Please wait ...';
         vm.isBusy = true;
         $rootScope.showSplash = true;
-        vm.navline = {
-            title: config.appTitle,
-            text: 'Created By Net Esolutions',
-            link: 'https://www.facebook.com/pages/' +
-                  'NET-eSolutions-Corporation/158854007505791?fref=ts'
-        };
 
         activate();
 

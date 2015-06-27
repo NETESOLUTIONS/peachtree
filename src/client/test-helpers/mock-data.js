@@ -22,7 +22,7 @@ var mockData = (function() {
         ];
     }
     /* Get Mock datasets for testing */
-    
+    //Using Same data for all data service routs for now.
     function getMockDrugs() {
        return [
                 {term: 'ENBREL', count: 216013},

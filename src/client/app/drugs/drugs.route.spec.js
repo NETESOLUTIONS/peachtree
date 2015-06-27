@@ -1,5 +1,5 @@
 /* jshint -W117, -W030 */
-describe('drugs routes', function () {
+describe('Drugs routes', function () {
     describe('state', function () {
         var controller;
         var view = 'app/drugs/drugs.html';
@@ -16,7 +16,7 @@ describe('drugs routes', function () {
         bard.verifyNoOutstandingHttpRequests();
 
         it('should map state dashboard to url / ', function() {
-            expect($state.href('drugs', {})).to.equal('/');
+            expect($state.href('drugs', {})).to.equal('/drugs');
         });
 
         it('should map /drugs route to dashboard View template', function () {
