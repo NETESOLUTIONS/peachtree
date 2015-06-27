@@ -9,8 +9,8 @@ describe('DrugsController', function() {
     });
 
     beforeEach(function () {
-        sinon.stub(dataservice, 'getDrugs').returns($q.when(drugs));
-        sinon.stub(dataservice, 'getTop10Drugs').returns($q.when(drugs));
+        sinon.stub(dataservice, 'getReactions').returns($q.when(drugs));
+        sinon.stub(dataservice, 'getReactionsFor').returns($q.when(drugs));
         controller = $controller('DrugsController');
         $rootScope.$apply();
     });
@@ -35,7 +35,7 @@ describe('DrugsController', function() {
                 expect(controller.drugs).to.have.length.above(0);
             });
             it('should have at least 1 drug', function () {
-                expect(controller.drugsTop10).to.have.length.above(0);
+                expect(controller.drugs).to.have.length.above(0);
             });
             it('should have drugs count of 10', function () {
                 expect(controller.drugs).to.have.length(10);

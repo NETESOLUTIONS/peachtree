@@ -2,9 +2,19 @@
     <section class="matter">
         <div class="container">
             <div class="row">
-                <h1>List of Drugs</h1>
+                <div class="col-lg-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for Drugs" ng-model="vm.drugName">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" ng-click="vm.getReactionsFor()">Go!</button>
+                  </span>
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->    
+            </div>
+            <div class="row">
+                <h5>List of common reactions</h1>
                 <div class="widget-content user">
-                    <table class="table table-condensed table-sort" ng-show="vm.drugs.results">
+                    <table class="table table-condensed table-sort" ng-show="vm.drugs">
                         <thead>
                             <tr>
                                 <th ng-click="vm.sortType = 'term'; vm.sortReverse = !vm.sortReverse">Drug <i class="fa fa-caret-up" ng-show="vm.sortType == 'term' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'term' && vm.sortReverse"></i>
@@ -14,17 +24,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="d in vm.drugs.results | orderBy:vm.sortType:vm.sortReverse">
+                            <tr ng-repeat="d in vm.drugs | orderBy:vm.sortType:vm.sortReverse">
                                 <td>{{d.term}}</td>
                                 <td>{{d.count}}</td>
                             </tr>
                         </tbody>
                     </table>
-                    <!--
-<h3 ng-repeat="d in vm.drugsTop10.results">
-{{ d.term}} - {{ d.count }}
-</h3>
--->
                 </div>
             </div>
         </div>

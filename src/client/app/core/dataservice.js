@@ -21,7 +21,9 @@
             getDevices: getDevices,
             getTop10Devices: getTop10Devices,
             getFoodByState: getFoodByState,
-            getFoodByStateTop10: getFoodByStateTop10
+            getFoodByStateTop10: getFoodByStateTop10,
+            getReactions: getReactions,
+            getReactionsFor: getReactionsFor
         };
 
         return service;
@@ -129,6 +131,45 @@
             //define fail function
             function fail(error) {
                 var msg = 'query for top 10 states failed. ' + error.data.description;
+                logger.error(msg);
+                return $q.reject(msg);
+            }
+        }
+        /*
+         * Function for getting list of Reactions
+        */
+        function getReactions() {
+            return $http.get(drugUrl + '&count=patient.reaction.reactionmeddrapt.exact&limit=1000')
+                .then(success)
+                .catch(fail);
+            //define success function
+            function success(response) {
+                return response.data.results;
+            }
+            //define fail function
+            function fail(error) {
+                var msg = 'query for top drugs failed. ' + error.data.description;
+                logger.error(msg);
+                return $q.reject(msg);
+            }
+        }
+        /*
+         * Function for getting list of top reactions by searching for a certain drug
+        */
+        function getReactionsFor(drugName) {
+            return $http.get(drugUrl + '&search=patient.drug.openfda.brand_name:"' + drugName +
+                                       '"&count=patient.reaction.reactionmeddrapt.exact')
+                .then(success)
+                .catch(fail);
+            //define success function
+            function success(response) {
+                var msg = 'Query for ' + drugName + ' brand successful';
+                logger.success(msg);
+                return response.data.results;
+            }
+            //define fail function
+            function fail(error) {
+                var msg = 'Query for brand ' + drugName + ' failed please try another brand name';
                 logger.error(msg);
                 return $q.reject(msg);
             }
