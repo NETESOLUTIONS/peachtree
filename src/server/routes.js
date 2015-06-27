@@ -17,26 +17,30 @@ function getData(req, res, next) {
         console.error(err);
         res.send('Error in database operation:<br/><pre>' + err + '</pre>');
     }
-
-    if (process.env.DATABASE_URL === undefined) {
-        reportError('Please define DATABASE_URL environment variable');
-    } else {
-        console.log('Connecting to ' + process.env.DATABASE_URL + '...');
-        pg.connect(process.env.DATABASE_URL, function (err, client, done) {
-            if (err) {
-                reportError(err);
-            } else {
-                console.log('Connected.');
-                client.query('SELECT * FROM test_table', function (err, res) {
-                    done();
-                    if (err) {
-                        reportError(err);
-                    } else {
-                        res.send(res.rows);
-                    }
-                });
-            }
-        });
+    
+    try {
+        if (process.env.DATABASE_URL === undefined) {
+            reportError('Please define DATABASE_URL environment variable');
+        } else {
+            console.log('Connecting to ' + process.env.DATABASE_URL + '...');
+            pg.connect(process.env.DATABASE_URL, function (err, client, done) {
+                if (err) {
+                    reportError(err);
+                } else {
+                    console.log('Connected.');
+                    client.query('SELECT * FROM test_table', function (err, result) {
+                        done();
+                        if (err) {
+                            reportError(err);
+                        } else {
+                            res.send(result.rows);
+                        }
+                    });
+                }
+            });
+        }
+    } catch(err) {
+        reportError(err);
     }
 }
 
