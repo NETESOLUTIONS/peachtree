@@ -16,7 +16,8 @@
                 <div class="widget-content user">
                     <table class="table table-condensed table-sort" ng-show="vm.drugs">
                         <thead>
-                            <tr>
+<!-- TODO <Code review by DK> The code lines are too long. Better to wrap, e.g. at colymn 120 -->
+                            <tr> 
                                 <th ng-click="vm.sortType = 'term'; vm.sortReverse = !vm.sortReverse">Drug <i class="fa fa-caret-up" ng-show="vm.sortType == 'term' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'term' && vm.sortReverse"></i>
                                 </th>
                                 <th ng-click="vm.sortType = 'count'; vm.sortReverse = !vm.sortReverse">Side Effect Reports <i class="fa fa-caret-up" ng-show="vm.sortType == 'count' && !vm.sortReverse"></i><i class="fa fa-caret-down" ng-show="vm.sortType == 'count' && vm.sortReverse"></i>

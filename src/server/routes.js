@@ -45,7 +45,7 @@ function getData(req, res, next) {
 }
 
 function getPeople(req, res, next) {
-    res.status(200).send(data.people);
+    res.status(200).send(data.people); // TBD <Code Review by DK> .status(200) could be probably omitted
 }
 
 function getPerson(req, res, next) {
@@ -55,7 +55,7 @@ function getPerson(req, res, next) {
     })[0];
 
     if (person) {
-        res.status(200).send(person);
+        res.status(200).send(person); // TBD <Code Review by DK> .status(200) could be probably omitted
     } else {
         four0four.send404(req, res, 'person ' + id + ' not found');
     }
