@@ -7481,6 +7481,9 @@ h4,
 h6 {
   color: #7c6356;
 }
+h1 {
+  font-size: 24px;
+}
 .shell .main-content {
   height: 100%;
   width: 100vw;
@@ -7488,9 +7491,37 @@ h6 {
 .content .mainbar .matter {
   min-height: 100%;
 }
-table thead tr th {
-  background-color: #D7CEBC;
+#skip-nav {
+  position: absolute;
+  top: -100px;
+  background-color: #40332c;
+  padding: 5px;
+  transition: .3s;
+  z-index: 100;
+}
+#skip-nav:focus {
+  top: 0;
+}
+.input-group input.form-control {
+  background-color: #fff;
+  padding-left: 8px;
+}
+.input-group button {
+  box-shadow: none;
   color: #40332c;
+}
+table thead tr th {
+  background-color: #d7cebc;
+  color: #40332c;
+}
+table thead tr th.rank {
+  min-width: 50px;
+}
+table thead tr th.item {
+  min-width: 55px;
+}
+table thead tr th.ae {
+  min-width: 65px;
 }
 table th,
 table td {
@@ -7510,9 +7541,35 @@ table.table-sort th i {
   top: 0.8rem;
   margin-left: 0.4rem;
 }
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  min-width: 5em;
+  margin-top: 60px;
+  margin-left: 16px;
+  padding: .5em;
+  background: #ffdba0;
+  color: #453D3F;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+  border-radius: 6px;
+  opacity: 1;
+}
+.tooltip:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top-color: #ffdba0;
+}
 /******************************************************************
  *
- * Nab Overrides
+ * Nav Overrides
  *
  ******************************************************************/
 .navbar {
@@ -7527,16 +7584,58 @@ table.table-sort th i {
   color: #fff;
 }
 .navbar-default img {
-  width: 20px;
+  padding-left: .5rem;
+  width: 4rem;
 }
 .navbar-default .tagline {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.nav-pills > li > a {
+  background-color: #fff;
+  color: #40332c;
+  border: 1px solid #d7cebc;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.nav-pills > li > a:hover {
+  background-color: #f4f1ec;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .nav-pills > li > a {
+    margin-bottom: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+}
+.nav-pills > li:last-child a {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media (max-width: 767px) {
+  .nav-pills > li:last-child a {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 10px;
+  }
+}
+.nav-pills > li + li {
+  margin-left: 0;
+}
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  background-color: #40332c;
+  background-color: #d7cebc;
+  color: #40332c;
+  font-weight: bold;
 }
 /******************************************************************
  *
@@ -7549,13 +7648,17 @@ table.table-sort th i {
 }
 chartist {
   display: block;
-  padding-bottom: 10px;
-  height: 342px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  height: 374px;
   background-color: #fff;
   border-radius: 8px;
 }
 chartist .ct-series.ct-series-a line {
   stroke: #f47f4b;
+}
+chartist .ct-bar {
+  stroke-width: 20px;
 }
 chartist .ct-label {
   color: #40332c;
@@ -7594,10 +7697,10 @@ chartist.out svg {
   opacity: 1;
 }
 .shuffle-animation.ng-leave {
-  -moz-transition: 0.1s ease-out all;
-  -o-transition: 0.1s ease-out all;
-  -webkit-transition: 0.1s ease-out all;
-  transition: 0.1s ease-out all;
+  -moz-transition: 0.3s ease-out all;
+  -o-transition: 0.3s ease-out all;
+  -webkit-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
   left: 0;
 }
 .shuffle-animation.ng-leave.ng-leave-active {

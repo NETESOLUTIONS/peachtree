@@ -1,5 +1,6 @@
 <div class="main-content" ng-controller="ShellController as vm">
     <header>
+        <a href="#content" id="skip-nav">Skip Navigation</a>
         <ht-top-nav navline="vm.navline"></ht-top-nav>
     </header>
     <section id="content" class="container content">
@@ -11,7 +12,7 @@
              ngplus-overlay-delay-in="50"
              ngplus-overlay-delay-out="700"
              ngplus-overlay-animation="dissolve-animation">
-            <img src="images/busy.gif"/>
+            <img src="images/busy.gif" alt="Loading Indicator">
 
             <div class="page-spinner-message overlay-message">{{vm.busyMessage}}</div>
         </div>

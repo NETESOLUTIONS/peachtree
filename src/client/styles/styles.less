@@ -13,10 +13,11 @@
  * variables
  *
  ******************************************************************/
-@color_main: #ffc76d;
-@color_sub: #85DFFF;
-@color_nav: #40332c;
-@color_headers: lighten(@color-nav, 20%);//#6B6B6B;
+@color-main: #ffc76d;
+@color-sub: #85DFFF;
+@color-nav: #40332c;
+@color-headers: lighten(@color-nav, 20%);//#6B6B6B;
+@color-light-brown: #D7CEBC;
 
 /******************************************************************
  *
@@ -49,7 +50,11 @@ h3,
 h4,
 h4,
 h6 {
-    color: @color_headers;
+    color: @color-headers;
+}
+
+h1 {
+    font-size: 24px;
 }
 
 .shell .main-content {
@@ -61,12 +66,44 @@ h6 {
     min-height:100%;
 }
 
+#skip-nav {
+    position: absolute;
+    top: -100px;
+    background-color: @color-nav;
+    padding: 5px;
+    transition: .3s;
+    z-index: 100;
+    &:focus {
+        top: 0;
+    }
+}
+
+.input-group {
+    input.form-control {
+        background-color: #fff;
+        padding-left: 8px;
+    }
+    button {
+        box-shadow: none;
+        color: @color-nav;
+    }
+}
+
 table {
     thead {
         tr {
             th {
-                background-color: #D7CEBC; //lighten(@color_main,20%);
+                background-color: @color-light-brown; //lighten(@color-main,20%);
                 color: @color-nav;
+                &.rank {
+                    min-width: 50px;
+                }
+                &.item {
+                    min-width: 55px;
+                }
+                &.ae {
+                    min-width: 65px;
+                }
             }
 
         }
@@ -93,15 +130,42 @@ table {
     }
 }
 
+.tooltip {
+    @color-tt: lighten(@color-main, 10%);
+    position: absolute;
+    display: inline-block;
+    min-width: 5em;
+    margin-top: 60px;
+    margin-left: 16px;
+    padding: .5em;
+    background: @color-tt;
+    color: #453D3F;
+    font-weight: 700;
+    text-align: center;
+    pointer-events: none;
+    border-radius: 6px;
+    opacity: 1;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-top-color: @color-tt;
+    }
+}
 
 /******************************************************************
  *
- * Nab Overrides
+ * Nav Overrides
  *
  ******************************************************************/
 .navbar {
-    background-color: @color_nav;
-    background: linear-gradient(to bottom, @color_nav 0%,lighten(@color_nav, 12%) 100%);
+    background-color: @color-nav;
+    background: linear-gradient(to bottom, @color-nav 0%,lighten(@color-nav, 12%) 100%);
     color: #fff;
     border: none;
     border-radius: 0;
@@ -122,10 +186,53 @@ table {
     }
 }
 
+.nav-pills > li {
+    @radius: 10px;
+    > a {
+        background-color: #fff;
+        color: @color-nav;
+        border: 1px solid @color-light-brown;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: @radius;
+        border-bottom-left-radius: @radius;
+        &:hover {
+            background-color: lighten(@color-light-brown,15%);
+            font-weight: bold;
+        }
+        @media (max-width: 767px) {
+            margin-bottom: 0;
+            border-top-left-radius: @radius;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: @radius;
+            border-bottom-right-radius: 0;
+        }
+    }
+    &:last-child {
+        a {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: @radius;
+            border-bottom-right-radius: @radius;
+            @media (max-width: 767px) {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: @radius;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: @radius;
+            }
+        }
+    }
+    + li {
+        margin-left: 0;
+    }
+}
+
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-    background-color: @color-nav;
+    background-color: @color-light-brown;
+    color: @color-nav;
+    font-weight: bold;
 }
 
 /******************************************************************
@@ -141,8 +248,9 @@ table {
 
 chartist {
     display: block;
-    padding-bottom: 10px;
-    height: 342px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    height: 374px;
     background-color: #fff;
     border-radius: 8px;
     .ct-series.ct-series-a {
@@ -150,8 +258,11 @@ chartist {
             stroke: #f47f4b;
         }
     }
+    .ct-bar {
+        stroke-width: 20px;
+    }
     .ct-label {
-        color: @color_nav;
+        color: @color-nav;
     }
     svg {
         transition: 0.3s;
