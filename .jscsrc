@@ -1,5 +1,5 @@
 {
-    "excludeFiles": ["node_modules/**", "bower_components/**", "src/client/test-helpers/*"],
+    "excludeFiles": ["node_modules/**", "bower_components/**", "src/client/test-helpers/*", "src/client/app/widgets/choro-map.directive.js"],
 
     "requireCurlyBraces": [
         "if",

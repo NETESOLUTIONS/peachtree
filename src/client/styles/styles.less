@@ -56,7 +56,9 @@ h6 {
     height:100%;
     width:100vw;
 }
-
+.container.content {
+    width: 85vw;
+}
 .content .mainbar .matter {
     min-height:100%;
 }
@@ -96,10 +98,11 @@ table {
 
 /******************************************************************
  *
- * Nab Overrides
+ * Nav Overrides
  *
  ******************************************************************/
 .navbar {
+    z-index:5;
     background-color: @color_nav;
     background: linear-gradient(to bottom, @color_nav 0%,lighten(@color_nav, 12%) 100%);
     color: #fff;
@@ -162,6 +165,43 @@ chartist {
         }
     }
 }
+/******************************************************************
+ *
+ * food and map styles
+ *
+ ******************************************************************/
+.food-left {
+    margin-top:-10rem;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+.states-choropleth {
+  fill: #ccc;
+}
+
+#tooltip-container {
+  position: absolute;
+  background-color: rgba(51,51,51, .6);
+  color: #fff;
+  padding: 10px;
+  display: none;
+}
+
+.tooltip_key {
+  font-weight: bold;
+}
+
+.tooltip_value {
+  margin-left: 20px;
+  float: right;
+}
+
+
 /******************************************************************
  *
  * Animations and supporting styles

@@ -9,7 +9,8 @@ describe('FoodController', function() {
     });
 
     beforeEach(function () {
-        sinon.stub(dataservice, 'getFoodByStateTop10').returns($q.when(drugs));
+        sinon.stub(dataservice, 'getFoodByState').returns($q.when(drugs));
+        sinon.stub(dataservice, 'getStates').returns($q.when(drugs));
         controller = $controller('FoodController');
         $rootScope.$apply();
     });
