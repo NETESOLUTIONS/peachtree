@@ -167,8 +167,8 @@ table {
  ******************************************************************/
 .navbar {
     z-index:5;
-    background-color: @color_nav;
-    background: linear-gradient(to bottom, @color_nav 0%,lighten(@color_nav, 12%) 100%);
+    background-color: @color-nav;
+    background: linear-gradient(to bottom, @color-nav 0%,lighten(@color-nav, 12%) 100%);
     color: #fff;
     border: none;
     border-radius: 0;
@@ -282,7 +282,18 @@ chartist {
  *
  ******************************************************************/
 .food-left {
-    margin-top:-10rem;
+   @media (min-width: 1280px) {
+       margin-top:-4rem;
+   }
+   @media (min-width: 1450px) {
+       margin-top:-6rem;
+   }
+   @media (min-width: 1600px) {
+       margin-top:-12rem;
+   }
+   @media (min-width: 1850px) {
+       margin-top:-14rem;
+   }
 }
 
 .states {
