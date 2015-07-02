@@ -28,7 +28,7 @@
     "toastr": "~2.1.1",
     "moment": "~2.10.3",
     "angular-chart.js": "~0.7.2",
-    "angular-chartist.js": "~0.9.1",
+    "angular-chartist.js": "~3.3.6",
     "chartist-plugin-tooltip": "~0.0.7"
   },
   "overrides": {
