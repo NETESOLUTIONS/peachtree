@@ -29,7 +29,9 @@
     "moment": "~2.10.3",
     "angular-chart.js": "~0.7.2",
     "angular-chartist.js": "~3.3.6",
-    "chartist-plugin-tooltip": "~0.0.7"
+    "chartist-plugin-tooltip": "~0.0.7",
+    "d3": "~3.5.5",
+    "topojson": "~1.6.19"
   },
   "overrides": {
     "bootstrap": {
