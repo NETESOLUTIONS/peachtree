@@ -8,7 +8,7 @@
 npm-debug.log
 /*.env
 /report
-
+env.json
 src/client/.DS_Store
 
 src/.DS_Store
