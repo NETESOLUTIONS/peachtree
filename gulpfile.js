@@ -210,7 +210,7 @@ gulp.task('build', ['optimize', 'images', 'fonts'], function() {
  * and inject them into the new index.html
  * @return {Stream}
  */
-gulp.task('optimize', ['inject', 'test'], function() {
+gulp.task('optimize', ['inject', 'test', 'security'], function() {
     log('Optimizing the js, css, and html');
 
     var assets = $.useref.assets({searchPath: './'});
@@ -250,6 +250,14 @@ gulp.task('optimize', ['inject', 'test'], function() {
         .pipe(gulp.dest(config.build));
 });
 
+/**
+ * Move Security file to root directory.
+ * @return {Stream}
+ */
+gulp.task('security', function() {
+    gulp.src('./src/client/e986cd4ee978aa3fc17f2250593b5428f7718ae6ba7d5d1a771852f10c091f0b.txt')
+       .pipe(gulp.dest(config.build));
+});
 /**
  * Remove all files from the build, temp, and reports folders
  * @param  {Function} done - callback when complete
