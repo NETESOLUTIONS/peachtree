@@ -9,6 +9,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var port = process.env.PORT || 8001;
 var four0four = require('./utils/404')();
+var helmet = require('helmet');
 
 var environment = process.env.NODE_ENV;
 
@@ -17,6 +18,9 @@ app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(logger('dev'));
+// Only let me be framed by people of the same origin: 
+app.use(helmet.frameguard('sameorigin'));
+app.use(helmet.frameguard());  // Same-origin by default.
 
 app.use('/api', require('./routes'));
 
