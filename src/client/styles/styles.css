@@ -7486,7 +7486,9 @@ h1 {
 }
 .shell .main-content {
   height: 100%;
-  width: 100vw;
+}
+.container.content {
+  width: 85vw;
 }
 .content .mainbar .matter {
   min-height: 100%;
@@ -7548,8 +7550,8 @@ table.table-sort th i {
   margin-top: 60px;
   margin-left: 16px;
   padding: .5em;
-  background: #ffdba0;
-  color: #453D3F;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
   font-weight: 700;
   text-align: center;
   pointer-events: none;
@@ -7565,7 +7567,7 @@ table.table-sort th i {
   height: 0;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top-color: #ffdba0;
+  border-top-color: rgba(0, 0, 0, 0.5);
 }
 /******************************************************************
  *
@@ -7573,6 +7575,7 @@ table.table-sort th i {
  *
  ******************************************************************/
 .navbar {
+  z-index: 5;
   background-color: #40332c;
   background: linear-gradient(to bottom, #40332c 0%, #645045 100%);
   color: #fff;
@@ -7584,6 +7587,7 @@ table.table-sort th i {
   color: #fff;
 }
 .navbar-default img {
+  margin-top: -0.5rem;
   padding-left: .5rem;
   width: 4rem;
 }
@@ -7668,6 +7672,38 @@ chartist svg {
 }
 chartist.out svg {
   opacity: 0;
+}
+/******************************************************************
+ *
+ * food and map styles
+ *
+ ******************************************************************/
+.land {
+  stroke: #f7f7f7;
+  stroke-width: 1px;
+}
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+.states-choropleth {
+  fill: #ccc;
+}
+#tooltip-container {
+  position: absolute;
+  background-color: rgba(51, 51, 51, 0.6);
+  color: #fff;
+  padding: 10px;
+  display: none;
+  border-radius: 6px;
+}
+.tooltip_key {
+  font-weight: bold;
+}
+.tooltip_value {
+  margin-left: 20px;
+  float: right;
 }
 /******************************************************************
  *
