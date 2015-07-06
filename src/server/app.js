@@ -18,16 +18,13 @@ app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(logger('dev'));
-// Only let me be framed by people of the same origin: 
+// Only let me be framed by people of the same origin:
 app.use(helmet.frameguard('sameorigin'));
 app.use(helmet.frameguard());  // Same-origin by default.
-
 app.use('/api', require('./routes'));
-
 console.log('About to crank up node');
 console.log('PORT=' + port);
 console.log('NODE_ENV=' + environment);
-
 switch (environment){
     case 'build':
         console.log('** BUILD **');
