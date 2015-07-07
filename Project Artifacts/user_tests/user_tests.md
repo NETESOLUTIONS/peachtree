@@ -6,7 +6,7 @@ SCENARIO: A doctor or researcher is treating a new patient/case and needs a refe
 Peachtree tasks:
 	Unable to devise list. I am only able to click on ‘Drugs’ tab, which returns a list of drugs and no additional options. 
 RESULTS: 
-Landing Page 
+Landing Page
 Top banner:	
 1.	‘peachtree’ starts as white text, a hover turns it yellow and the pointer changes as if I can click it but nothing happens. Afterwards, it is colored dark grey until you click again.
 2.	I like the brown and yellow/orange together for the dashboard and drugs button. 
@@ -43,7 +43,7 @@ SCENARIO: Item Detail Page i.e. Adverse effects for the selected drug
 SCENARIO: Visualization for summary counts for Drugs with Adverse Effects
 	Unavailable. 
 ADDITIONAL UI RESULTS:
-Landing Page 
+Landing Page
 Top banner:	
 1.	The logo is a nice touch, it and ‘peachtree’ could be closer together. 
 2.	The tab text has changed color during mouseover and click. It’s nice that it is different from peachtree - as it is now able to be interpreted as branded, especially with the logo. 
