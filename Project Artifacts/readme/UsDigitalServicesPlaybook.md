@@ -190,11 +190,7 @@
         - [ ] Conduct load and performance tests at regular intervals, including before public launch
     * Key Questions:
         * What percentage of the code base is covered by automated tests?
-            * :------------- | :-------------
-Statements  | 60.84%
-Branches  | 25.93%
-Functions | 53.38%
-Lines | 61.09%
+            * Statements: 60.84%, Branches: 25.93%, Functions: 53.38%, Lines: 61.09%
         * How long does it take to build, test, and deploy a typical bug fix?
             * This really depends on the type of bug.
         * How long does it take to build, test, and deploy a new feature into production?
