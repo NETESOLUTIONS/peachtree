@@ -103,11 +103,11 @@
         - [ ] Contract includes a transition of services period and transition-out plan          
     * Key Questions:
         * What is the scope of the project? What are the key deliverables?
-            * 
+            * The scope of the project is to create a POC to demonstrate our Agile capabilities to build an aplication using FDA data through APIs. The key deliverables are a working design prototype, working application and its associated documentation.
         * What are the milestones? How frequent are they?
             * In Github, our milestones line up with either sprints, delivery deadlines, or both. 
         * What are the performance metrics defined in the contract (e.g., response time, system uptime, time period to address priority issues)?
-            * 
+            * In absence of specific performance benchmarks, we have considered standard attributes including but not limited to Relevance, Scalability and results being returned in acceptable timeframe.
 6. Play 6: Assign one leader and hold that person accountable
     * Checklist:
         - [x] A product owner has been identified

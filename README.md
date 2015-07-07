@@ -8,19 +8,19 @@
 
 NETE created the PeachTree application in response to GSA BPA RFQ: 4QTFHS150004. This application showcases our ability to deliver modern, agile, and quality solutions. The application name references our sponsoring agency; the name honors new and enlightened government procurement solutions. Our team has experience rapidly deploying and delivering open and Agile software solutions—specifically tailored to NIH requirements and end-user needs.
 
-NETE’s solution leverages Open Source application programming Interfaces (APIs) for the FDA Drug, Device, and Food dataset.  Our [prototype ](http://nete-peachtree.herokuapp.com)is an interactive web tool used to inform and educate consumers about drugs and devices experiencing the most reported adverse events—such as food recall (enforcement actions) counts by state—and drug queries regarding commonly reported adverse events associated with a drug.
+NETE’s solution leverages Open Source application programming Interfaces (APIs) from [open.fda.gov](https://open.fda.gov/).  Our [prototype ](http://nete-peachtree.herokuapp.com)is an interactive web tool used to inform and educate consumers about drugs and devices experiencing the most reported adverse events—such as food recall (enforcement actions) counts by state—and drug queries regarding commonly reported adverse events associated with a drug.
 
 While Peachtree was made as a prototype, it can be leveraged for future products and can be extended as a full-fledged delivery and methodology platform. It was designed with openness in mind; it utilizes the open source community to push technology solutions to the forefront.
 
 ## AGILE MODEL
 
-Our mature Agile model has been developed, implemented, and used successfully on other NIH projects such as: project iRePORT, project ReTRACE, and project FederalRePORTER. These projects demonstrate our robust solution, a mature and repeatable model that follows Agile manifesto principles.
+Our mature Agile model has been developed, implemented, and used successfully on other NIH projects such as: project iRePORT, project ReTRACE, and project FederalRePORTER. These projects demonstrate our robust solution, a mature and repeatable model that follows Agile principles.
 
-We started tracking our sprints, using a [SlidesJS Presentation](http://slides.com/mikedklein/deck). Decomposed tasks, resulting from Sprint planning, are moved to Trello boards. For group messaging, we convene daily standups and use Slack. GitHub serves as our source code version control system. Our embedded Product Owner exercises full authority over adding and removing features and prioritizes the Features Backlog, based on user feedback and team progress. We define team roles as closely to the pure Agile structure as possible; this provides focus, ensuring a solid product and timely delivery.
+We started tracking our sprints, using a [SlidesJS Presentation](http://slides.com/mikedklein/deck). Decomposed tasks, resulting from Sprint planning, are moved to Trello boards. For group messaging, we convene daily standups and use Slack. GitHub serves as our version control system. Our embedded Product Owner exercises full authority over adding and removing features and prioritizes the Features Backlog, based on user feedback and team progress. We define team roles as closely to the pure Agile structure as possible; this provides focus, ensuring a solid product and timely delivery.
 
 ## DESIGN AND DEVELOPMENT TEAM
 
-We assigned one leader, responsible and accountable for our Pool Three Prototype Development. Our architecture owner (Agile solution architect) was responsible for modeling, identifying technology and tools, and collaborating with the team to determine the best business solution accommodating all identified requirements. Our multidisciplinary team includes the following labor categories—as specified in Attachment B & C—
+We assigned one leader, responsible and accountable for our Pool Three Prototype Development. Our architecture owner was responsible for modeling, identifying technology and tools, and collaborating with the team to determine the best business solution accommodating all identified requirements. Our multidisciplinary team includes the following labor categories—as specified in Attachment B & C—
 
 1. (Category 1) Product Manager
 2. (Category 2) Technical Architect
@@ -33,8 +33,6 @@ We assigned one leader, responsible and accountable for our Pool Three Prototype
 9. (Category 7) Backend Web Developer
 10.(Category 9) Security Engineer
 11.(Category 12)Business Analyst
-
-Another member of our design and development team was a User-Researcher, who served as our usability tester.
 
 ## AGILE DESIGN AND DEVELOPMENT MODEL
 
@@ -76,7 +74,7 @@ To provide optimal viewing and interactive experiences, our User Experience (UX)
 
 As our understanding evolved, rapid prototyping facilitated design iterations and quick changes. Continual feedback from the Product Owner and based on usability, 508 testing, and application security compliance drove these changes. We created stories and prioritized them, ensuring the most valued work was addressed and fully responded to user needs.
 
-We used Bootstrap to develop our multi-device framework. As we developed and implemented the [Design Style Guide](Project Artifacts/NETE Software Design Style Guide, Best Practices and Patterns - JavaScript Technology Stack.docx), this allowed our team to verify functionality and design elements to be reused and ensure compliance with Section 508. For a more complete listing of the technologies used see our full technology stack [document](Project Artifacts/readme/TECHNOLOGY_STACK.md).
+We used Bootstrap to develop our multi-device framework. As we developed and implemented the [Design Style Guide](Project Artifacts/Visual Design Style Guide.pdf), this allowed our team to verify functionality and design elements to be reused and ensure compliance with Section 508. For a more complete listing of the technologies used see our full technology stack [document](Project Artifacts/readme/TECHNOLOGY_STACK.md).
 
 We devised the design and development lifecycle of our prototype, using open-source or freely available tools and technologies. Our design prototype started with conceptual wireframes in Axure and was refined in [UXPin](https://live.uxpin.com/b520be96922e9c950998a741bd5d3778ae7df860#/pages/24273706), using our design assets. Our application uses Bootstrap and AngularJS—as the front-end UI frameworks for rapid development—and NodeJS—for back-end support.
 
@@ -100,7 +98,7 @@ Our development approach included:
 5. Setting up or using continuous monitoring
 6. Deploying our software in a container (i.e., using an operating-system-level virtualization)
  
-We used an iterative and incremental approach, whereby feedback influenced subsequent work or versions of the prototype. We have provided the necessary [Project Artifacts/readme/documentation](INSTALLATION.md) to install and run our prototype on another machine. Our prototype and underlying platforms, used to create and run the prototype, are openly licensed or free of charge.
+We used an iterative and incremental approach, whereby feedback influenced subsequent work or versions of the prototype. We have provided the necessary [documentation](Project Artifacts/readme/INSTALLATION.md) to install and run our prototype on another machine. Our prototype and underlying platforms, used to create and run the prototype, are openly licensed or free of charge.
 
 As we developed code, we simultaneously created unit tests, running unit tests on every Codeship build. As defects were identified, our developer resolved the defect within the same sprint. We continuously refined our designs, based on feedback. We implemented usability [testing](Project Artifacts/user_tests/) through multiple iterations of mockups and wireframe development. We performed 508 and accessibility testing using JAWS screen reader, the WAVE toolbar, and Keyboard Accessibility. These tests helped drive continuous improvement and enhance usability for users with disability. To facilitate Application Security testing are there security scans results in GitHub, if yes add link here, we used the free version of Acunetix web vulnerability scanner; few minor issues were reported and subsequently remedied.
 
@@ -116,5 +114,5 @@ Artifact  | Link
 Installation  | [INSTALLATION.md](Project Artifacts/readme/INSTALLATION.md)
 Deployment  | [DEPLOYMENT.md](Project Artifacts/readme/DEPLOYMENT.md)
 Technology Stack  | [TECHNOLOGY_STACK.md](Project Artifacts/readme/TECHNOLOGY_STACK.md)
-Playbook | [USDigitalServicesPlaybook.md](Project Artifacts/readme/USDigitalServicesPlaybook.md)
+Playbook | [USDigitalServicesPlaybook.md](Project Artifacts/readme/UsDigitalServicesPlaybook.md)
 John Papa's Style Guide | [JohnPapaStyleGuide.md](Project Artifacts/readme/JohnPapaStyleGuide.md)
