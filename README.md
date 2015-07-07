@@ -1,7 +1,7 @@
 [ ![Codeship Status for NETESOLUTIONS/peachtree](https://codeship.com/projects/6684a180-fc10-0132-ef4e-46c0998097e0/status?branch=master)](https://codeship.com/projects/87386)
 
-#[nete peachtree app](http://nete-peachtree.herokuapp.com)
-##[peachtree original design concept](https://live.uxpin.com/b520be96922e9c950998a741bd5d3778ae7df860#/pages/24273706)
+[nete peachtree app](http://nete-peachtree.herokuapp.com)
+[peachtree original design concept](https://live.uxpin.com/b520be96922e9c950998a741bd5d3778ae7df860#/pages/24273706)
 
 # PEACHTREE APPLICATION
 
@@ -19,7 +19,7 @@ We started tracking our sprints, using a [SlidesJS Presentation](http://slides.c
 
 ## DESIGN AND DEVELOPMENT TEAM
 
-We assigned one leader, responsible and accountable for our Pool Three Prototype Development. Our architecture owner (Agile solution architect) was responsible for modeling, identifying technology and tools, and collaborating with the team to determine the best business solution accommodating all identified requirements. Our multidisciplinary team includes the following labor categories—as specified in Attachment C—
+We assigned one leader, responsible and accountable for our Pool Three Prototype Development. Our architecture owner (Agile solution architect) was responsible for modeling, identifying technology and tools, and collaborating with the team to determine the best business solution accommodating all identified requirements. Our multidisciplinary team includes the following labor categories—as specified in Attachment B & C—
 
 1. (Category 1) Product Manager
 2. (Category 2) Technical Architect
@@ -27,6 +27,11 @@ We assigned one leader, responsible and accountable for our Pool Three Prototype
 4. (Category 11) Agile Coach
 5. (Category 6) Frontend Web Developer
 6. (Category 8) DevOps Engineer
+7. (Category 5) Visual Designer
+8. (Category 4) Writer/Content Designer/Content Strategist
+9. (Category 7) Backend Web Developer
+10.(Category 9) Security Engineer
+11.(Category 12)Business Analyst
 
 Another member of our design and development team was a User-Researcher, who served as our usability tester.
 
@@ -40,7 +45,7 @@ The following provides an overview of our scrum implementation process:
 
 These phases are tightly coordinated.
 
-[Agile Diagram](Project Artifacts/Agile_design_develop_test.png)
+![Agile Diagram](Project Artifacts/Agile_design_develop_test.png)
  
 We set up a simple project board—using Trello—to track deliverables and design a backlog of potential user stories for each major scenario. Our team is empowered, self-organized, and accountable for delivering value within each daily sprint.
 
