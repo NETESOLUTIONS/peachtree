@@ -42,18 +42,18 @@
             * 
 3. Play 3: Make it simple and intuitive
     * Checklist:
-        - [ ] Create or use an existing, simple, and flexible design style guide for the service
-        - [ ] Use the design style guide consistently for related digital services
+        - [x] Create or use an existing, simple, and flexible design style guide for the service
+        - [x] Use the design style guide consistently for related digital services
         - [ ] Give users clear information about where they are in each step of the process
-        - [ ] Follow accessibility best practices to ensure all people can use the service
+        - [x] Follow accessibility best practices to ensure all people can use the service
         - [ ] Provide users with a way to exit and return later to complete the process
-        - [ ] Use language that is familiar to the user and easy to understand
-        - [ ] Use language and design consistently throughout the service, including online and offline touch points 
+        - [x] Use language that is familiar to the user and easy to understand
+        - [x] Use language and design consistently throughout the service, including online and offline touch points 
     * Key Questions:
         * What primary tasks are the user trying to accomplish?
             * Access a list of drugs, an item detail page for selected drug, and a dynamic visual of summary                             counts/statistics. 
         * Is the language as plain and universal as possible?
-            * 
+            * yes
         * Why does the user want or need this service?
             * The user wants this service so that he or she may efficiently access a drug database, see their documented                after effects, and then cross check with patient or project history and see if the drug is compatible. 
         * What languages is your service offered in?
@@ -65,19 +65,19 @@
         - [x] Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible, no longer than three months from the beginning of the project, using a “beta” or “test” period if needed
         - [x] Run usability tests frequently to see how well the service works and identify improvements that should be made
         - [x] Ensure the individuals building the service communicate closely using techniques such as launch meetings, war rooms, daily standups, and team chat tools
-        - [ ] Keep delivery teams small and focused; limit organizational layers that separate these teams from the business owners
+        - [x] Keep delivery teams small and focused; limit organizational layers that separate these teams from the business owners
         - [x] Release features and improvements multiple times each month
         - [x] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
-        - [ ] Use a source code version control system
+        - [x] Use a source code version control system
         - [x] Give the entire project team access to the issue tracker and version control system 
-        - [ ] Use code reviews to ensure quality          
+        - [x] Use code reviews to ensure quality          
     * Key Questions:
         * How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
-            * 
+            * We deployed a production release very two sprints and the MVP was available after the initial two sprints.
         * How long does it take for a production deployment?
-            * 
+            * Every two sprints resulted in a production deployment.
         * How many days or weeks are in each iteration/sprint?
-            * It depends on the clients needs, but the usual is two weeks. 
+            * It depends on the clients needs, but the usual is two to four weeks in other NETE development projects.  
         * Which version control system is being used?
             * Github. 
         * How are bugs tracked and tickets issued? What tool is used?
@@ -87,7 +87,7 @@
         * How often do you review and reprioritize the feature and bug backlog?
             * Depends on the work load or importance - from daily to weekly. 
         * How do you collect user feedback during development? How is that feedback used to improve the service?
-            * 
+            * Feedback was collected in sprint review meeting and was incorporated for future sprint planning.
         * At each stage of usability testing, which gaps were identified in addressing user needs?
             * Backend architecture, frontend human-centered design, visualization stubbles or successes, and user interface              and usability. 
 5. Play 5: Structure budgets and contracts to support delivery
@@ -110,24 +110,24 @@
             * 
 6. Play 6: Assign one leader and hold that person accountable
     * Checklist:
-        - [ ] A product owner has been identified
-        - [ ] All stakeholders agree that the product owner has the authority to assign tasks and make decisions about features and technical implementation details
-        - [ ] The product owner has a product management background with technical experience to assess alternatives and weigh tradeoffs
-        - [ ] The product owner has a work plan that includes budget estimates and identifies funding sources
+        - [x] A product owner has been identified
+        - [x] All stakeholders agree that the product owner has the authority to assign tasks and make decisions about features and technical implementation details
+        - [x] The product owner has a product management background with technical experience to assess alternatives and weigh tradeoffs
+        - [x] The product owner has a work plan that includes budget estimates and identifies funding sources
         - [ ] The product owner has a strong relationship with the contracting officer
     * Key Questions:
         * Who is the product owner?
-            * 
+            * Person accountable for the delivery of the prototype took the role of product owner.
         * What organizational changes have been made to ensure the product owner has sufficient authority over and support for the project?
-            * 
+            * Assigned him authority for decision making and empowered him with a self organized scrum team.
         * What does it take for the product owner to add or remove a feature from the service?
-            * 
+            * Feedback from team and end users and research on similar products available in the market.
 7. Play 7: Bring in experienced teams
     * Checklist:
-        - [ ] Member(s) of the team have experience building popular, high-traffic digital services
-        - [ ] Member(s) of the team have experience designing mobile and web applications
-        - [ ] Member(s) of the team have experience using automated testing frameworks
-        - [ ] Member(s) of the team have experience with modern development and operations (DevOps) techniques like continuous integration and continuous deployment
+        - [x] Member(s) of the team have experience building popular, high-traffic digital services
+        - [x] Member(s) of the team have experience designing mobile and web applications
+        - [x] Member(s) of the team have experience using automated testing frameworks
+        - [x] Member(s) of the team have experience with modern development and operations (DevOps) techniques like continuous integration and continuous deployment
         - [ ] Member(s) of the team have experience securing digital services
         - [ ] A Federal contracting officer is on the internal team if a third party will be used for development work
         - [ ] A Federal budget officer is on the internal team or is a partner
@@ -135,9 +135,9 @@
 8. Play 8: Choose a modern technology stack
     * Checklist:
         - [ ] Choose software frameworks that are commonly used by private-sector companies creating similar services
-        - [ ] Whenever possible, ensure that software can be deployed on a variety of commodity hardware types
+        - [x] Whenever possible, ensure that software can be deployed on a variety of commodity hardware types
         - [ ] Ensure that each project has clear, understandable instructions for setting up a local development environment, and that team members can be quickly added or removed from projects
-        - [ ] Consider open source software solutions at every layer of the stack
+        - [x] Consider open source software solutions at every layer of the stack
     * Key Questions:
         * What is your development stack and why did you choose it?
             * 
@@ -148,7 +148,7 @@
 9. Play 9: Deploy in a flexible hosting environment
     * Checklist:
         - [ ] Resources are provisioned on demand
-        - [ ] Resources scale based on real-time user demand
+        - [x] Resources scale based on real-time user demand
         - [ ] Resources are provisioned through an API
         - [ ] Resources are available in multiple regions
         - [ ] We only pay for resources we use
@@ -184,8 +184,8 @@
 10. Play 10: Automate testing and deployments
     * Checklist:
         - [ ] Create automated tests that verify all user-facing functionality
-        - [ ] Create unit and integration tests to verify modules and components
-        - [ ] Run tests automatically as part of the build process
+        - [x] Create unit and integration tests to verify modules and components
+        - [x] Run tests automatically as part of the build process
         - [ ] Perform deployments automatically with deployment scripts, continuous delivery services, or similar techniques
         - [ ] Conduct load and performance tests at regular intervals, including before public launch
     * Key Questions:
