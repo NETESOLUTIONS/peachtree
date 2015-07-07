@@ -2,98 +2,98 @@
 
 #[nete peachtree app](http://nete-peachtree.herokuapp.com)
 ##[peachtree original design concept](https://live.uxpin.com/b520be96922e9c950998a741bd5d3778ae7df860#/pages/24273706)
-# peachtree
-MVP App for GSA RFQ:4QTFHS150004. This app is meant to showcase NET ESOLUTIONS ability to deliver open, modern, and agile solutions for government applications. The name pays homage to the location of GSA and their foresight in providing modern acquisition strategies. 401 West Peachtree Street NW, Suite 820 Atlanta, GA 30308
-## Description
-This app was created in response to GSA RFQ:4QTFHS150004. The intention of the app is to showcase NETE's ability to deliver quality solutions in a modern agile way. The name of the app is in reference to the sponsoring agency and was named thusly to show respect for a new and enlightened way of  government procurement solutions.
 
-Private industry is moving at a blinding pace and all the while opening up visibility into what they do, which has led to an explosion in collaboration. This network of openess can be leveraged by the governemnt. Groups like 18f and openDataFDA, and with guidance from visionary federal executive leaders such as Dr. Kass-Hout, the public sector is quickly catching up.
+# PEACHTREE APPLICATION
 
-Peachtree was made as a prototype but also has the extensibility to be a full fledged delivery and methodology platform that can be leveraged for future products. It was made with openness in mind and utilizes the opensource community that has pushed technology solutions forward. Using all open source technologies and frameworks, from things created by big corporations (AngularJs) to visualization frameworks that started with one man's vision (D3.Js Mike Bostock). The stack is built completely in javascript using NodeJs with Express for the server side langage, and Angular for the front. The visual patter library and framework are bootstrap with the paper bootswatch theme.
+NETE created the PeachTree application in response to GSA BPA RFQ: 4QTFHS150004. This application showcases our ability to deliver modern, agile, and quality solutions. The application name references our sponsoring agency; the name honors new and enlightened government procurement solutions. Our team has experience rapidly deploying and delivering open and Agile software solutions—specifically tailored to NIH requirements and end-user needs.
+NETE’s solution leverages Open Source application programming Interfaces (APIs) for the FDA Drug, Device, and Food dataset.  Our [prototype](http://nete-peachtree.herokuapp.com)is an interactive web tool used to inform and educate consumers about drugs and devices experiencing the most reported adverse events—such as food recall (enforcement actions) counts by state—and drug queries regarding commonly reported adverse events associated with a drug.
+While Peachtree was made as a prototype, it can be leveraged for future products and can be extended as a full-fledged delivery and methodology platform. It was designed with openness in mind; it utilizes the open source community to push technology solutions to the forefront.
 
-This app attempts to answer a few simple user stories:
-    * "Which durgs have the most adverse events reported?"
-    * "Which devices have the most adverse events reported?"
-    * "Which states have the most enforcement actions for food items?"
-    * "What are the top reported reactions associated with adverse events for drug brand x?"
+## AGILE MODEL
 
-Although simple the user stories have complexity when analyzed and could easily grow along with the API's development. It leads to more questions through data discovery.
-    * Are certain adverse events events limited to select demographic groups?
-    * Are adverse events of a certain kind related to specific named brand drug or do all generic counterparts experience similar adverse events?
-    * Why are reporting rates for certain agents higher than others?
-    
-The possibilities are endless and so many questions can be asked, and hopefully answered in world where a community has the opportunity to colloborate.
+Our mature Agile model has been developed, implemented, and used successfully on other NIH projects such as: project iRePORT, project ReTRACE, and project FederalRePORTER. These projects demonstrate our robust solution, a mature and repeatable model that follows Agile manifesto principles.
+We started tracking our sprints, using a [SlidesJS Presentation](http://slides.com/mikedklein/deck). Decomposed tasks, resulting from Sprint planning, are moved to Trello boards. For group messaging, we convene daily standups and use Slack. GitHub serves as our source code version control system. Our embedded Product Owner exercises full authority over adding and removing features and prioritizes the Features Backlog, based on user feedback and team progress. We define team roles as closely to the pure Agile structure as possible; this provides focus, ensuring a solid product and timely delivery.
 
-Nete is proud to deliver this app to GSA and regardless of outcome is excited to be a part of a changing field that has the ability to make a world of difference.
+## DESIGN AND DEVELOPMENT TEAM
 
+We assigned one leader, responsible and accountable for our Pool Three Prototype Development. Our architecture owner (Agile solution architect) was responsible for modeling, identifying technology and tools, and collaborating with the team to determine the best business solution accommodating all identified requirements. Our multidisciplinary team includes the following labor categories—as specified in Attachment C—
 
-## Installation of peachtree
+1. (Category 1) Product Manager
+2. (Category 2) Technical Architect
+3. (Category 3) Interaction Designer
+4. (Category 11) Agile Coach
+5. (Category 6) Frontend Web Developer
+6. (Category 8) DevOps Engineer
 
-Make sure you have node installed, this project was built and tested with node 0.12.2 and npm 2.7.4.
+Another member of our design and development team was a User-Researcher, who served as our usability tester.
 
-Go ahead and clone the repository
-```
-$ git clone https://github.com/NETESOLUTIONS/peachtree.git
-$ cd peachtree/
-```
-Once in the directory run 
-```
-$ npm install
-```
-This will install all the project dependencies and run bower install postinstall. One thing to note here is that many of the bower dependencies are in dependencies and not devDependencies. This because of the structure or our deployment. Depending on you application you can move these around as you see fit. It will will also run an initial build which includes the tests to make sure it is delivered in a passing state.
+## AGILE DESIGN AND DEVELOPMENT MODEL
+
+The following provides an overview of our scrum implementation process:
+
+1. Project Backlog
+2. Sprint planning
+3. Release deployment.
+
+These phases are tightly coordinated.
+ 
+We set up a simple project board—using Trello—to track deliverables and design a backlog of potential user stories for each major scenario. Our team is empowered, self-organized, and accountable for delivering value within each daily sprint.
+
+## DESIGN APPROACH
+
+Our Agile Delivery Team created a working [prototype](http://nete-peachtree.herokuapp.com) for the Pool 3 Design Phase. This initial prototype demonstrates our agile delivery capabilities.  
+Our team assessed all requirements and needs, as a part of our Sprint Planning. Additionally, team leads evaluated, approved, and prioritized the backlog for the next Sprint.
+Our human-centered design approach focuses on the following principles:
+
+1. Making tangible prototypes of our ideas 
+2. Performing iterations, based on feedback we receive
+3. Applying what we learn directly from people
+4. Designing sustainable solutions
+5. Researching existing solutions
+6. Defining our target audience
+7. Interviewing product end-users
+8. Brainstorming and bundling ideas into a robust solution
+
+For example, we tailored a prototype that uniquely meets end-user requirements relating to FDA Drug and Device Adverse Events and Food Enforcement Actions. We made-up multiple user personas, selected from our corporate team to fulfill prototype roles, such as:
+
+i.  Avneet Hundal – Facility Administrator, who monitors the reported Adverse Events for Drugs and Devices.
+ii. Lily Chai – Physician involved in clinical trials management, who is interested in  for Drug and Device adverse events reports.
+
+To provide optimal viewing and interactive experiences, our User Experience (UX) designers focused on crafting each targeted device. For content, we examine mobile, desktop, and tablet device interfaces. We present higher resolution device users with appropriate content and mobile users with content and layout appropriate for their limited real estate and quick access needs to critical information.
+As our understanding evolved, rapid prototyping facilitated design iterations and quick changes. Continual feedback from the Product Owner and based on usability, 508 testing, and application security compliance drove these changes. We created stories and prioritized them, ensuring the most valued work was addressed and fully responded to user needs.
+We used Bootstrap to develop our multi-device framework. As we developed and implemented the Design Style Guide Add URL here, this allowed our team to verify functionality and design elements to be reused and ensure compliance with Section 508. 
+We devised the design and development lifecycle of our prototype, using open-source or freely available tools and technologies. Our design prototype started with conceptual wireframes in Axure and was refined in [UXPin](https://live.uxpin.com/b520be96922e9c950998a741bd5d3778ae7df860#/pages/24273706), using our design assets. Our application uses Bootstrap and AngularJS—as the front-end UI frameworks for rapid development—and NodeJS—for back-end support. 
+We used all open source technologies and frameworks, from products or tools created by corporations, such as AngularJs, to individual visualization frameworks, such as D3.Js, as envisioned by Mike Bostock. Our stack is built completely in javascript, using NodeJs with Express for the server-side language and Angular for the front. The visual pattern library and framework are themed with the [Paper](https://bootswatch.com/paper/) Bootswatch theme.
+During Iteration 0 of our agile modelling approach, as we developed and evolved our application architecture, we identified the high-level scope and initial requirements stack. As part of the sprint planning, along with functional use cases, our team tackled technical demands. We kept scalability and future enhancements in perspective, employing a just-in-time (JIT) methodology. 
+We adhered to our Scrum framework for planning and executing our Prototype development. To put together the project backlog, we follow data analysis and APIs. Team members prioritize high priority, user stories into our Sprint implementation plan. Our PeachTree prototype evolved, based on the priority our team assigned to each item in the product backlog.
+
+## DEVELOPMENT APPROACH
+
+Our Agile Delivery Team created a working [prototype](http://nete-peachtree.herokuapp.com) for Pool 3 – Full Stack, using the open-FDA dataset and API. We used modern, free or open-source technologies such as: Angular JS, Bootstrap, Bower, Karma, Codeship, and Heroku. Our approach accommodates various architectural layers (i.e., frontend, backend, etc.). We deployed our prototype on Heroku, a Platform-as-a-Service (PaaS) provider that is highly regarded. Heroku offers free tiers to users, so recreating the application can be done free of charge.
+Following our initial assessment, we convened a Sprint and Release Planning session to build our working model. During the sprint planning session, we developed a Six Sprint effort to implement across the three Use Cases. After two consecutive sprints, we had a production deployment. We created and checked the Sprint Plan into GitHub. Successive sprints were defined and implemented based on agreed upon priorities. In parallel to planning the Use Case development in Sprint 1, we identified open source technologies and user-centered design techniques to better replicate how an end-user would respond to our solution.
+Our development approach included: 
+1. Writing unit tests for our code
+2. Setting up or using a continuous integration system to automate running tests
+3. Continuously deploying code to the PaaS provider
+4. Setting up or using configuration management
+5. Setting up or using continuous monitoring
+6. Deploying our software in a container (i.e., using an operating-system-level virtualization)
+ 
+We used an iterative and incremental approach, whereby feedback influenced subsequent work or versions of the prototype. We have provided the necessary documentation Add URL or folder for installation steps to install and run our prototype on another machine. Our prototype and underlying platforms, used to create and run the prototype, are openly licensed or free of charge.
+As we developed code, we simultaneously created unit tests, running unit tests on every Codeship build. As defects were identified, our developer resolved the defect within the same sprint. We continuously refined our designs, based on feedback. We implemented usability testing Add Link here through multiple iterations of mockups and wireframe development. We performed 508 and accessibility testing using JAWS screen reader, the (WAT) WAVE toolbar, and Keyboard Accessibility. These tests helped drive continuous improvement and enhance usability for users with disability. To facilitate Application Security testing are there security scans results in GitHub, if yes add link here, we used the free version of Acunetix web vulnerability scanner; few minor issues were reported and subsequently remedied.
+
+## PROTOTYPE REPOSITORY
+
+NETE created a repository Add URL here consisting of all prototype source code, design assets, and associated documentation, related to the design and development of our prototype. 
+Add links to Installation and Deployment Steps here.
+
+## Installation
 
 ## Running the application locally.
-
-This app started with John Papa's Angular [Hottowel](https://github.com/johnpapa/HotTowel-Angular) yeoman generator. So, if you are interested in diving really deep into the structure, rules or the gulp setup please refer to his repo as it is an excellent resource.
-
-That beign said the gulp commands are directly taken from there with some minor modifications for deployment configurations. To get a list of the gulp tasks just run the default task or 
-```
-$ gulp help
-```
-That will list all the available actions
-
-To quickly fire up a development server and start messing around
-```
-$ gulp serve-dev
-```
-Which automatically starts the nodeserver opens your browser and starts browsersync for reloading and style injection.
 
 ## Deployment
 We have tailored our setup to facilitate our deployment structure, so it may not be well suited for other CI/CD platforms. Please feel free to fork and change as needed for you specific deployment approach.
 
 ## Technology and Tools Stack.
-* **Server Side**
-    * [NodeJS](https://nodejs.org/)
-    * [Express Generator](http://expressjs.com/)
-    * [PG - PosgreSQL](https://github.com/brianc/node-postgres)
-* **Data Back End**
-    * [PostgreSQL](http://www.postgresql.org/)
-* **Client Side**
-    * [AngularJS](https://angularjs.org/)
-    * [Angular UI Router](http://angular-ui.github.io/ui-router/site/#/api/ui.router)
-    * [Angular Chartist JS](https://github.com/paradox41/angular-chartist.js/tree/master)
-* **UI Frameworks/Font Libraries**
-    * [Bootstrap](http://getbootstrap.com/)
-    * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
-    * [Toastr](https://github.com/CodeSeven/toastr)
-    * [Jquery](https://jquery.com/)
-* **Build Tools and Generators**
-    * [GulpJS](http://gulpjs.com/)
-    * [Yeoman](http://yeoman.io/)
-    * [Hottowel Generator](https://github.com/johnpapa/generator-hottowel)
-    * [Bower](http://bower.io/)
-* **Testing Framework**
-    * [Karma](http://karma-runner.github.io/0.12/index.html)
-    * [ChaiJS](http://chaijs.com/)
-    * [BardJS](https://github.com/wardbell/bardjs)
-* **Hinting and Code Style Enforcement**
-    * [JSCS](http://jscs.info/)
-    * [JSHint](http://jshint.com/about/)
-* **CI/CD**
-    * [Codeship](https://codeship.com)
-* **Hosting**
-    * [Heroku](https://www.heroku.com/home)
-    * [AWS](http://aws.amazon.com/)
-* **Other Tools**
-    * [John Papa's Style Guide](https://github.com/johnpapa/angular-styleguide)
+
     
