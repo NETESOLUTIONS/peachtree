@@ -114,5 +114,5 @@ Artifact  | Link
 Installation  | [INSTALLATION.md](Project Artifacts/readme/INSTALLATION.md)
 Deployment  | [DEPLOYMENT.md](Project Artifacts/readme/DEPLOYMENT.md)
 Technology Stack  | [TECHNOLOGY_STACK.md](Project Artifacts/readme/TECHNOLOGY_STACK.md)
-Playbook | [USDigitalServicesPlaybook.md](Project Artifacts/readme/USDigitalServicesPlaybook.md)
+Playbook | [USDigitalServicesPlaybook.md](Project Artifacts/readme/UsDigitalServicesPlaybook.md)
 John Papa's Style Guide | [JohnPapaStyleGuide.md](Project Artifacts/readme/JohnPapaStyleGuide.md)
