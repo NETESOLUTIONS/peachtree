@@ -1,6 +1,7 @@
 [ ![Codeship Status for NETESOLUTIONS/peachtree](https://codeship.com/projects/6684a180-fc10-0132-ef4e-46c0998097e0/status?branch=master)](https://codeship.com/projects/87386)
 
 [nete peachtree app](http://nete-peachtree.herokuapp.com)
+
 [peachtree original design concept](https://live.uxpin.com/b520be96922e9c950998a741bd5d3778ae7df860#/pages/24273706)
 
 # PEACHTREE APPLICATION
@@ -41,7 +42,7 @@ The following provides an overview of our scrum implementation process:
 
 1. Project Backlog
 2. Sprint planning
-3. Release deployment.
+3. Release deployment
 
 These phases are tightly coordinated.
 
@@ -75,7 +76,7 @@ To provide optimal viewing and interactive experiences, our User Experience (UX)
 
 As our understanding evolved, rapid prototyping facilitated design iterations and quick changes. Continual feedback from the Product Owner and based on usability, 508 testing, and application security compliance drove these changes. We created stories and prioritized them, ensuring the most valued work was addressed and fully responded to user needs.
 
-We used Bootstrap to develop our multi-device framework. As we developed and implemented the [Design Style Guide](Project Artifacts/NETE Software Design Style Guide, Best Practices and Patterns - JavaScript Technology Stack.docx), this allowed our team to verify functionality and design elements to be reused and ensure compliance with Section 508. For a more complete listing of the technologies used see our full technology stack [document](TECHNOLOGY_STACK.md).
+We used Bootstrap to develop our multi-device framework. As we developed and implemented the [Design Style Guide](Project Artifacts/NETE Software Design Style Guide, Best Practices and Patterns - JavaScript Technology Stack.docx), this allowed our team to verify functionality and design elements to be reused and ensure compliance with Section 508. For a more complete listing of the technologies used see our full technology stack [document](Project Artifacts/readme/TECHNOLOGY_STACK.md).
 
 We devised the design and development lifecycle of our prototype, using open-source or freely available tools and technologies. Our design prototype started with conceptual wireframes in Axure and was refined in [UXPin](https://live.uxpin.com/b520be96922e9c950998a741bd5d3778ae7df860#/pages/24273706), using our design assets. Our application uses Bootstrap and AngularJS—as the front-end UI frameworks for rapid development—and NodeJS—for back-end support.
 
@@ -99,7 +100,7 @@ Our development approach included:
 5. Setting up or using continuous monitoring
 6. Deploying our software in a container (i.e., using an operating-system-level virtualization)
  
-We used an iterative and incremental approach, whereby feedback influenced subsequent work or versions of the prototype. We have provided the necessary [documentation](INSTALLATION.md) to install and run our prototype on another machine. Our prototype and underlying platforms, used to create and run the prototype, are openly licensed or free of charge.
+We used an iterative and incremental approach, whereby feedback influenced subsequent work or versions of the prototype. We have provided the necessary [Project Artifacts/readme/documentation](INSTALLATION.md) to install and run our prototype on another machine. Our prototype and underlying platforms, used to create and run the prototype, are openly licensed or free of charge.
 
 As we developed code, we simultaneously created unit tests, running unit tests on every Codeship build. As defects were identified, our developer resolved the defect within the same sprint. We continuously refined our designs, based on feedback. We implemented usability [testing](Project Artifacts/user_tests/) through multiple iterations of mockups and wireframe development. We performed 508 and accessibility testing using JAWS screen reader, the WAVE toolbar, and Keyboard Accessibility. These tests helped drive continuous improvement and enhance usability for users with disability. To facilitate Application Security testing are there security scans results in GitHub, if yes add link here, we used the free version of Acunetix web vulnerability scanner; few minor issues were reported and subsequently remedied.
 
@@ -108,4 +109,12 @@ As we developed code, we simultaneously created unit tests, running unit tests o
 NETE created a [repository](https://github.com/NETESOLUTIONS/peachtree/) consisting of all prototype source code, design assets, and associated documentation, related to the design and development of our prototype. 
 Add links to Installation and Deployment Steps here.
 
-    
+## Further Evidence
+
+Artifact  | Link
+:------------- | :-------------
+Installation  | [INSTALLATION.md](Project Artifacts/readme/INSTALLATION.md)
+Deployment  | [DEPLOYMENT.md](Project Artifacts/readme/DEPLOYMENT.md)
+Technology Stack  | [TECHNOLOGY_STACK.md](Project Artifacts/readme/TECHNOLOGY_STACK.md)
+Playbook | [USDigitalServicesPlaybook.md](Project Artifacts/readme/USDigitalServicesPlaybook.md)
+John Papa's Style Guide | [JohnPapaStyleGuide.md](Project Artifacts/readme/JohnPapaStyleGuide.md)
