@@ -1,4 +1,4 @@
-#Digital Services Playbook Checklist
+# Digital Services Playbook Checklist
 1. Play 1: Understand what people need
     * Checklist:
         - [x] Early in the project, spend time with current and prospective users of the service
@@ -134,160 +134,117 @@
         - [ ] The appropriate privacy, civil liberties, and/or legal advisor for the department or agency is a partner
 8. Play 8: Choose a modern technology stack
     * Checklist:
-        - [ ] Choose software frameworks that are commonly used by private-sector companies creating similar services
+        - [x] Choose software frameworks that are commonly used by private-sector companies creating similar services
         - [x] Whenever possible, ensure that software can be deployed on a variety of commodity hardware types
-        - [ ] Ensure that each project has clear, understandable instructions for setting up a local development environment, and that team members can be quickly added or removed from projects
+        - [x] Ensure that each project has clear, understandable instructions for setting up a local development environment, and that team members can be quickly added or removed from projects
         - [x] Consider open source software solutions at every layer of the stack
     * Key Questions:
         * What is your development stack and why did you choose it?
-            * 
+            * The deployment stack is nodejs for the backend and angularjs for client side framework. It was chosen because if its flexibility and ubiquity. Allowing developers to work in one programming language from the front to the back allows them to develop quickly and maintain style standards.
         * Which databases are you using and why did you choose them?
-            * 
+            * The database is a PostgreSQL database. PostgreSQL was chosen because of its open source nature and extensibility.
         * How long does it take for a new team member to start developing?
-            * 
+            * If the developer is familiar with modern tooling the time to first line of code is very minimal. For new developers onboarding should focus on tool stack to help them get up and running faster.
 9. Play 9: Deploy in a flexible hosting environment
     * Checklist:
-        - [ ] Resources are provisioned on demand
+        - [x] Resources are provisioned on demand
         - [x] Resources scale based on real-time user demand
-        - [ ] Resources are provisioned through an API
-        - [ ] Resources are available in multiple regions
+        - [x] Resources are provisioned through an API
+        - [x] Resources are available in multiple regions
         - [ ] We only pay for resources we use
-        - [ ] Static assets are served through a content delivery network
+        - [x] Static assets are served through a content delivery network
         - [ ] Application is hosted on commodity hardware
     * Key Questions:
         * Where is your service hosted?
-            *
+            * Heroku
         * What hardware does your service use to run?
-            *
+            * It is run in Linux containers (LXCs) provided and provision by Heroku.
         * What is the demand or usage pattern for your service?
-            * 
+            * Usage can be scaled utilizing worker dynos, when load is high. Thresholds can be set to how many and when they are to be bootstrapped. The prototype does not have this implemented but it is available.
         * What happens to your service when it experiences a surge in traffic or load?
-            * 
+            * See above response.
         * How much capacity is available in your hosting environment?
-            * 
+            * Capacity can be scaled to very high levels. However if server load is extremely high it may be prudent to move to IaaS provider like AWS or Azure for further scaling customization.
         * How long does it take you to provision a new resource, like an application server?
-            * 
+            * It is done very quickly using either command line tools provided by or Heroku or by setting specifications in the Procfile
         * How have you designed your service to scale based on demand?
-            * 
+            * Somewhat, for the MVP this was deemed an unecessary cost, but it is using a more powerful dyno to ensure better first page load times.
         * How are you paying for your hosting infrastructure (e.g., by the minute, hourly, daily, monthly, fixed)?
-            * 
+            * monthly
         * Is your service hosted in multiple regions, availability zones, or data centers?
-            * 
+            * It can be, CDNs can be used as well to deliver static content.
         * In the event of a catastrophic disaster to a datacenter, how long will it take to have the service operational?
-            * 
+            * This application can be mirgrated and deployed in a few minutes. It can also be moved to other hosting services with relative ease.
         * What would be the impact of a prolonged downtime window?
-            * 
+            * In this case lack of access to the MVP.
         * What data redundancy do you have built into the system, and what would be the impact of a catastrophic data loss?
-            * 
+            * Data rendunancy is maintained through systematic backups. A catastrophic data loss would not actually render the application unusable just certain features would go down.
         * How often do you need to contact a person from your hosting provider to get resources or to fix an issue?
-            * 
+            * Never.
 10. Play 10: Automate testing and deployments
     * Checklist:
-        - [ ] Create automated tests that verify all user-facing functionality
+        - [x] Create automated tests that verify all user-facing functionality
         - [x] Create unit and integration tests to verify modules and components
         - [x] Run tests automatically as part of the build process
-        - [ ] Perform deployments automatically with deployment scripts, continuous delivery services, or similar techniques
+        - [x] Perform deployments automatically with deployment scripts, continuous delivery services, or similar techniques
         - [ ] Conduct load and performance tests at regular intervals, including before public launch
     * Key Questions:
         * What percentage of the code base is covered by automated tests?
-            * 
+            * :------------- | :-------------
+Statements  | 60.84%
+Branches  | 25.93%
+Functions | 53.38%
+Lines | 61.09%
         * How long does it take to build, test, and deploy a typical bug fix?
-            * 
+            * This really depends on the type of bug.
         * How long does it take to build, test, and deploy a new feature into production?
-            * 
+            * Again, highly dependant on the feature request.
         * How frequently are builds created?
-            * 
+            * Everytime a commit to the master branch is made.
         * What test tools are used?
-            * 
+            * Karam, Chai, Mocha and BardJs
         * Which deployment automation or continuous integration tools are used?
-            * 
+            * Codeship
         * What is the estimated maximum number of concurrent users who will want to use the system?
-            * 
+            * 10
         * How many simultaneous users could the system handle, according to the most recent capacity test?
-            * 
+            * Have not conducted capacity tests on the MVP
         * How does the service perform when you exceed the expected target usage volume? Does it degrade gracefully or catastrophically?
-            * 
+            * Have not exceeded, but it will attempt graceful degradation.
         * What is your scaling strategy when demand increases suddenly?
-            * 
+            * Increase the number of dynos (scale horizontally)
 11. Play 11: Manage security and privacy through reusable processes
-    * Checklist:
-        - [ ] Contact the appropriate privacy or legal officer of the department or agency to determine whether a System of Records Notice (SORN), Privacy Impact Assessment, or other review should be conducted
-        - [ ] Determine, in consultation with a records officer, what data is collected and why, how it is used or shared, how it is stored and secured, and how long it is kept
-        - [ ] Determine, in consultation with a privacy specialist, whether and how users are notified about how personal information is collected and used, including whether a privacy policy is needed and where it should appear, and how users will be notified in the event of a security breach
-        - [ ] Consider whether the user should be able to access, delete, or remove their information from the service
-        - [ ] “Pre-certify” the hosting infrastructure used for the project using FedRAMP
-        - [ ] Use deployment scripts to ensure configuration of production environment remains consistent and controllable
-    * Key Questions:
-        * Does the service collect personal information from the user? How is the user notified of this collection?
-            * 
-        * Does it collect more information than necessary? Could the data be used in ways an average user wouldn't expect?
-            * 
-        * How does a user access, correct, delete, or remove personal information?
-            * 
-        * Will any of the personal information stored in the system be shared with other services, people, or partners?
-            * 
-        * How and how often is the service tested for security vulnerabilities?
-            * 
-        * How can someone from the public report a security issue?
-            * 
+    * N/A for our current prototype.
 12. Play 12: Use data to drive decisions
     * Checklist:
-        - [ ] Monitor system-level resource utilization in real time
-        - [ ] Monitor system performance in real-time (e.g. response time, latency, throughput, and error rates)
-        - [ ] Ensure monitoring can measure median, 95th percentile, and 98th percentile performance
-        - [ ] Create automated alerts based on this monitoring
+        - [x] Monitor system-level resource utilization in real time
+        - [x] Monitor system performance in real-time (e.g. response time, latency, throughput, and error rates)
+        - [x] Ensure monitoring can measure median, 95th percentile, and 98th percentile performance
+        - [x] Create automated alerts based on this monitoring
         - [ ] Track concurrent users in real-time, and monitor user behaviors in the aggregate to determine how well the service meets user needs
         - [ ] Publish metrics internally
         - [ ] Publish metrics externally
         - [ ] Use an experimentation tool that supports multivariate testing in production 
     * Key Questions:
         * What are the key metrics for the service?
-            * 
+            * Response Time, Throughput (request/min), Dyno Load, Memory Usage, Memory Swap.
         * How have these metrics performed over the life of the service?
-            * 
+            * No alarms to date.
         * Which system monitoring tools are in place?
-            * 
+            * Heroku's built in monitoring tools.
         * What is the targeted average response time for your service? What percent of requests take more than 1 second, 2 seconds, 4 seconds, and 8 seconds?
-            * 
+            * 1 second is the target, currently first page load is roughly 1.5 seconds due to some blocking css and not utilizing CDNs.
         * What is the average response time and percentile breakdown (percent of requests taking more than 1s, 2s, 4s, and 8s) for the top 10 transactions?
-            * 
+            * Average time to first byte is 180 ms.
         * What is the volume of each of your service’s top 10 transactions? What is the percentage of transactions started vs. completed?
             * 
         * What is your service’s monthly uptime target?
-            * 
+            * Heroku maintains an uptime around 99.99 (significant to two nines)
         * What is your service’s monthly uptime percentage, including scheduled maintenance? Excluding scheduled maintenance?
-            * 
+            * 100% so far.
         * How does your team receive automated alerts when incidents occur?
-            * 
-        * How does your team respond to incidents? What is your post-mortem process?
-            * 
-        * Which tools are in place to measure user behavior?
-            * 
-        * What tools or technologies are used for A/B testing?
-            * 
-        * How do you measure customer satisfaction?
-            * 
+            * Emails are sent to admins.
 13. Play 13: Default to open
-    * Checklist:
-        - [ ] Offer users a mechanism to report bugs and issues, and be responsive to these reports
-        - [ ] Provide datasets to the public, in their entirety, through bulk downloads and APIs (application programming interfaces)
-        - [ ] Ensure that data from the service is explicitly in the public domain, and that rights are waived globally via an international public domain dedication, such as the “Creative Commons Zero” waiver
-        - [ ] Catalog data in the agency’s enterprise data inventory and add any public datasets to the agency’s public data listing
-        - [ ] Ensure that we maintain the rights to all data developed by third parties in a manner that is releasable and reusable at no cost to the public
-        - [ ] Ensure that we maintain contractual rights to all custom software developed by third parties in a manner that is publishable and reusable at no cost
-        - [ ] When appropriate, create an API for third parties and internal users to interact with the service directly
-        - [ ] When appropriate, publish source code of projects or components online
-        - [ ] When appropriate, share your development process and progress publicly
-    * Key Questions:
-        * How are you collecting user feedback for bugs and issues?
-            *
-        * If there is an API, what capabilities does it provide? Who uses it? How is it documented?
-            *
-        * If the codebase has not been released under an open source license, explain why.
-            * 
-        * What components are made available to the public as open source?
-            * 
-        * What datasets are made available to the public?
-            * 
+    * N/A for prototype application
 
 Taken from the [U.S. Digital Services Playbook](https://playbook.cio.gov/) 
