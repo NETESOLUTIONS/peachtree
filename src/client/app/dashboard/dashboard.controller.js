@@ -30,16 +30,6 @@
         };
         //Initial activation
         activate();
-        // Is this for chart animations?
-        // todo: Refactor this to make not use JQuery
-        // function hideChart() {
-        //     $('chartist').addClass('out');
-        // }
-        // function showChart() {
-        //     setTimeout( function() {
-        //         $('chartist').removeClass('out');
-        //     }, 10);
-        // }
 
         function activate() {
             var promises = [getTop10()];
@@ -70,8 +60,6 @@
             } else if (vm.activeSelection === 'Devices') {
                 functionCall = dataservice.getTop10Devices();
             }
-            // todo see comment line 29
-            // hideChart();
             //Return data based on selection
             return functionCall.then(function (data) {
                 vm.data = data;
@@ -79,9 +67,6 @@
                     vm.data[i].rank = i + 1;
                     if (vm.data[i].term.length === 0 || !vm.data[i].term.trim()) {
                         vm.data[i].term = 'No Value Reported';
-                        //                        vm.chartData.labels[i] = 'No Value';
-                        //                    } else {
-                        //                        vm.chartData.labels[i] = vm.data[i].term;
                     }
                     vm.chartData.labels[i] = vm.data[i].rank;
                     vm.chartData.series[0][i] = {
@@ -89,8 +74,6 @@
                         value: vm.data[i].count
                     };
                 }
-                // todo see comment line 29
-                // showChart();
                 return vm.data;
             });
         }
