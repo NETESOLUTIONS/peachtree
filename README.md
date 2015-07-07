@@ -8,19 +8,19 @@
 
 NETE created the PeachTree application in response to GSA BPA RFQ: 4QTFHS150004. This application showcases our ability to deliver modern, agile, and quality solutions. The application name references our sponsoring agency; the name honors new and enlightened government procurement solutions. Our team has experience rapidly deploying and delivering open and Agile software solutions—specifically tailored to NIH requirements and end-user needs.
 
-NETE’s solution leverages Open Source application programming Interfaces (APIs) for the FDA Drug, Device, and Food dataset.  Our [prototype ](http://nete-peachtree.herokuapp.com)is an interactive web tool used to inform and educate consumers about drugs and devices experiencing the most reported adverse events—such as food recall (enforcement actions) counts by state—and drug queries regarding commonly reported adverse events associated with a drug.
+NETE’s solution leverages Open Source application programming Interfaces (APIs) from [open.fda.gov](https://open.fda.gov/).  Our [prototype ](http://nete-peachtree.herokuapp.com)is an interactive web tool used to inform and educate consumers about drugs and devices experiencing the most reported adverse events—such as food recall (enforcement actions) counts by state—and drug queries regarding commonly reported adverse events associated with a drug.
 
 While Peachtree was made as a prototype, it can be leveraged for future products and can be extended as a full-fledged delivery and methodology platform. It was designed with openness in mind; it utilizes the open source community to push technology solutions to the forefront.
 
 ## AGILE MODEL
 
-Our mature Agile model has been developed, implemented, and used successfully on other NIH projects such as: project iRePORT, project ReTRACE, and project FederalRePORTER. These projects demonstrate our robust solution, a mature and repeatable model that follows Agile manifesto principles.
+Our mature Agile model has been developed, implemented, and used successfully on other NIH projects such as: project iRePORT, project ReTRACE, and project FederalRePORTER. These projects demonstrate our robust solution, a mature and repeatable model that follows Agile principles.
 
-We started tracking our sprints, using a [SlidesJS Presentation](http://slides.com/mikedklein/deck). Decomposed tasks, resulting from Sprint planning, are moved to Trello boards. For group messaging, we convene daily standups and use Slack. GitHub serves as our source code version control system. Our embedded Product Owner exercises full authority over adding and removing features and prioritizes the Features Backlog, based on user feedback and team progress. We define team roles as closely to the pure Agile structure as possible; this provides focus, ensuring a solid product and timely delivery.
+We started tracking our sprints, using a [SlidesJS Presentation](http://slides.com/mikedklein/deck). Decomposed tasks, resulting from Sprint planning, are moved to Trello boards. For group messaging, we convene daily standups and use Slack. GitHub serves as our version control system. Our embedded Product Owner exercises full authority over adding and removing features and prioritizes the Features Backlog, based on user feedback and team progress. We define team roles as closely to the pure Agile structure as possible; this provides focus, ensuring a solid product and timely delivery.
 
 ## DESIGN AND DEVELOPMENT TEAM
 
-We assigned one leader, responsible and accountable for our Pool Three Prototype Development. Our architecture owner (Agile solution architect) was responsible for modeling, identifying technology and tools, and collaborating with the team to determine the best business solution accommodating all identified requirements. Our multidisciplinary team includes the following labor categories—as specified in Attachment B & C—
+We assigned one leader, responsible and accountable for our Pool Three Prototype Development. Our architecture owner was responsible for modeling, identifying technology and tools, and collaborating with the team to determine the best business solution accommodating all identified requirements. Our multidisciplinary team includes the following labor categories—as specified in Attachment B & C—
 
 1. (Category 1) Product Manager
 2. (Category 2) Technical Architect
@@ -33,8 +33,6 @@ We assigned one leader, responsible and accountable for our Pool Three Prototype
 9. (Category 7) Backend Web Developer
 10.(Category 9) Security Engineer
 11.(Category 12)Business Analyst
-
-Another member of our design and development team was a User-Researcher, who served as our usability tester.
 
 ## AGILE DESIGN AND DEVELOPMENT MODEL
 
