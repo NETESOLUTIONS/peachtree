@@ -100,7 +100,7 @@ Our development approach included:
 5. Setting up or using continuous monitoring
 6. Deploying our software in a container (i.e., using an operating-system-level virtualization)
  
-We used an iterative and incremental approach, whereby feedback influenced subsequent work or versions of the prototype. We have provided the necessary [Project Artifacts/readme/documentation](INSTALLATION.md) to install and run our prototype on another machine. Our prototype and underlying platforms, used to create and run the prototype, are openly licensed or free of charge.
+We used an iterative and incremental approach, whereby feedback influenced subsequent work or versions of the prototype. We have provided the necessary [documentation](Project Artifacts/readme/INSTALLATION.md) to install and run our prototype on another machine. Our prototype and underlying platforms, used to create and run the prototype, are openly licensed or free of charge.
 
 As we developed code, we simultaneously created unit tests, running unit tests on every Codeship build. As defects were identified, our developer resolved the defect within the same sprint. We continuously refined our designs, based on feedback. We implemented usability [testing](Project Artifacts/user_tests/) through multiple iterations of mockups and wireframe development. We performed 508 and accessibility testing using JAWS screen reader, the WAVE toolbar, and Keyboard Accessibility. These tests helped drive continuous improvement and enhance usability for users with disability. To facilitate Application Security testing are there security scans results in GitHub, if yes add link here, we used the free version of Acunetix web vulnerability scanner; few minor issues were reported and subsequently remedied.
 
