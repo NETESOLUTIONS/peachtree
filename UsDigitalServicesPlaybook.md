@@ -10,7 +10,7 @@
         - [x] As the digital service is being built, regularly test it with potential users to ensure it meets people’s needs 
     * Key Questions:
         * Who are your primary users?
-            * 
+            * Primary users of PeachTree are Medical practioners, Hospital Administrative users and general public interested in knowing the adverse events of Food, Drugs and Devices.
         * What user needs will this service address?
             * This web service, 'peachtree,' is a place for a user to easily and efficently sort through drugs and their                 corresponding after effects with a reported count/rate.  
         * Why does the user want or need this service?
@@ -20,7 +20,7 @@
         * Which research methods were used?
             * A/B, Usabilty, User Experience, Expert, Build, and Speed Testing were all used to progress from strat to                   finish. 
         * What were the key findings?
-            * 
+            * The key findings included the usability, ease of use and reporting the information as-is.
         * How were the findings documented? Where can future team members access the documentation?
             * Key finding were documented with comprehensive write-ups, styored as User Testing by version number and stored                 in correspnding Github repo main page. 
         * How often are you testing with real people?
