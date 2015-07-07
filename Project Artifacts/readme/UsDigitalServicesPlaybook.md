@@ -103,11 +103,11 @@
         - [ ] Contract includes a transition of services period and transition-out plan          
     * Key Questions:
         * What is the scope of the project? What are the key deliverables?
-            * 
+            * The scope of the project is to create a POC to demonstrate our Agile capabilities to build an aplication using FDA data through APIs. The key deliverables are a working design prototype, working application and its associated documentation.
         * What are the milestones? How frequent are they?
             * In Github, our milestones line up with either sprints, delivery deadlines, or both. 
         * What are the performance metrics defined in the contract (e.g., response time, system uptime, time period to address priority issues)?
-            * 
+            * In absence of specific performance benchmarks, we have considered standard attributes including but not limited to Relevance, Scalability and results being returned in acceptable timeframe.
 6. Play 6: Assign one leader and hold that person accountable
     * Checklist:
         - [x] A product owner has been identified
@@ -269,7 +269,7 @@
             * 
 13. Play 13: Default to open
     * Checklist:
-        - [ ] Offer users a mechanism to report bugs and issues, and be responsive to these reports
+        - [x] Offer users a mechanism to report bugs and issues, and be responsive to these reports
         - [ ] Provide datasets to the public, in their entirety, through bulk downloads and APIs (application programming interfaces)
         - [ ] Ensure that data from the service is explicitly in the public domain, and that rights are waived globally via an international public domain dedication, such as the “Creative Commons Zero” waiver
         - [ ] Catalog data in the agency’s enterprise data inventory and add any public datasets to the agency’s public data listing
@@ -280,7 +280,7 @@
         - [ ] When appropriate, share your development process and progress publicly
     * Key Questions:
         * How are you collecting user feedback for bugs and issues?
-            *
+            * As part of sprint review meeting, results of usability tests.
         * If there is an API, what capabilities does it provide? Who uses it? How is it documented?
             *
         * If the codebase has not been released under an open source license, explain why.
