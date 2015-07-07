@@ -11,5 +11,4 @@ npm-debug.log
 env.json
 src/client/.DS_Store
 src/client/app/foods/.jshintrc
-
 src/.DS_Store
